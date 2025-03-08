@@ -1,0 +1,15 @@
+/* Large screen adjustments (500px and above) */
+@media screen and (min-width: 500px) {
+    /* Change header style */
+    header {
+      background-color: black;
+      color: white;
+    }
+  
+    /* Main layout: Two columns side by side */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+      gap: 1rem;
+    }
+  }
