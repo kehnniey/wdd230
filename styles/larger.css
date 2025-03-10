@@ -1,13 +1,10 @@
 
-
-
-
 @media screen and (min-width: 768px) {
 
     nav ul {
    
         justify-content: space-around;
-        flex-direction: row; /* Stack links in a column */
+        flex-direction: row; 
         text-align: center; 
          margin: 0.5rem 0; 
     }    

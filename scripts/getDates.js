@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
             month: "long",
             day: "numeric",
         });
-        lastModifiedMobile.textContent = `Last updated: ${formattedDate}`;
+        lastModifiedMobile.textContent = `${formattedDate}`;
         
     } else {
-        lastModifiedMobile.textContent = "Last updated: Unavailable";
+        lastModifiedMobile.textContent = "Unavailable";
     
     }
 });
