@@ -1,0 +1,45 @@
+
+@media screen and (min-width: 768px) {
+
+    nav ul {
+   
+        justify-content: space-around;
+        flex-direction: row; 
+        text-align: center; 
+         margin: 0.5rem 0; 
+    }    
+
+    main {
+        grid-template-columns: 2fr 1fr;
+        
+      }
+    
+      .learning-activities {
+        grid-column: 1;
+      }
+      .info {
+        grid-column: 2;
+      }
+    
+      header {
+        
+        flex-direction: row;
+        align-items: center; 
+      }
+    
+    
+    .profile-header {
+      gap: 2rem;
+      padding: 1.5rem;
+    }
+  
+    .profile-header img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .profile-header .student-name {
+      font-size: 1.8rem;
+    }
+  }
+  

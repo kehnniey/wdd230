@@ -1,0 +1,27 @@
+/* Use Google Font - Roboto for the body */
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Style header, main, and footer with maximum width, centered, border, padding, and background color */
+  header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #e6f2ff; /* Blueish background color */
+  }
+  
+  /* Style the main element as a grid with one column and 1rem gap */
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  
+  /* Style the section elements with padding and white background */
+  section {
+    padding: 1rem;
+    background-color: #fff;
+  } 
+  
