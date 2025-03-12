@@ -1,19 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const currentYearElement = document.getElementById("currentyear");
-    const lastModifiedElement = document.getElementById("lastModified");
+// Get all elements with class "currentyear" OR id "currentyear"
+const currentYearElements = document.querySelectorAll("#currentyear, .currentyear");
+const currentYear = new Date().getFullYear();
 
-    // Set current year
-    const currentYear = new Date().getFullYear();
-    currentYearElement.textContent = currentYear;
-
-    // Set last modified date
-    const lastModifiedDate = new Date(document.lastModified);
-    lastModifiedElement.textContent = `Last updated: ${lastModifiedDate.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    })}`;
+currentYearElements.forEach((el) => {
+  el.textContent = currentYear;
 });
 
+// Last modified date
+const lastModified = document.lastModified;
+const lastModifiedElement = document.getElementById("lastModifiedMobile");
 
-
+if (lastModifiedElement) {
+  lastModifiedElement.textContent = `Last Modified: ${lastModified}`;
+}

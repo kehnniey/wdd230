@@ -7,62 +7,62 @@
 <meta name="description" content="WDD 230 - Web Frontend Development" />
 <meta name="author" content="Kehinde Ojo" />
 
-<!-- Preconnect to Google Fonts -->
+<!-- Fonts & Icons -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-
-<!-- Favicon -->
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
 
 <!-- CSS -->
 <link rel="stylesheet" href="styles/base.css" />
 <link rel="stylesheet" href="styles/larger.css" />
 
-<!-- Scripts -->
+<!-- JS -->
 <script src="scripts/getdates.js" defer></script>
 <script src="scripts/weather.js" defer></script>
 </head>
+
 <body>
 <h1>WDD230: Course Home Page</h1>
+
 <div class="container">
-    <header class="profile-header">
-        <h2 class="student-name">Kehinde Ojo</h2>
-        <img src="images/profile.jpg" alt="Profile Picture" />
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Site Plan</a></li>
-            <li><a href="#">Form</a></li>
-        </ul>
-    </nav>
+<header class="profile-header">
+    <h2 class="student-name">Kehinde Ojo</h2>
+    <img src="images/profile.jpg" alt="Profile Picture" />
+</header>
 
-    <main>
-        <section class="learning-activities">
-            <h3>Learning Activities</h3>
-            <p>Week 01: <a href="#">Layout</a> | <a href="#">Media Query</a> | <a href="#">JS Pen</a></p>
-            <p>Week 02: <a href="#">Design Principles</a> | <a href="#">Social Media</a></p>
-            <p>Week 03: <a href="#">Webp Image Format</a> | <a href="#">Lazy Loading</a></p>
-            <p>Week 04: <a href="#">CSS Psuedo-classes</a> | <a href="#">CSS Combinators</a></p>
-            <p>Week 05: <a href="#">Pseudo-elements</a> | <a href="#">Working with JSON data</a></p>
-            <p>Week 06: <a href="#">The Chamber Home Page Enhancements</a></p>              
-        </section>
+<nav>
+    <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Chamber</a></li>
+    <li><a href="#">Site Plan</a></li>
+    <li><a href="#">Form</a></li>
+    </ul>
+</nav>
 
-        <section class="info">
-            <h3>Information</h3>
-            <p id="location">Loading...</p>
-            <p id="weather-description">Loading weather...</p>
-            <p id="weather">🌞 <span class="temp-area">Loading...</span></p>
-            <p>Page Visits: <span id="pageVisits">0</span></p>
-        </section>
-    </main>
+<main>
+    <section class="learning-activities">
+    <h3>Learning Activities</h3>
+    <p>Week 01: <a href="#">Layout</a> | <a href="#">Media Query</a> | <a href="#">JS Pen</a></p>
+    <p>Week 02: <a href="#">Design Principles</a> | <a href="#">Social Media</a></p>
+    <p>Week 03: <a href="#">Webp Image Format</a> | <a href="#">Lazy Loading</a></p>
+    <p>Week 04: <a href="#">CSS Psuedo-classes</a> | <a href="#">CSS Combinators</a></p>
+    <p>Week 05: <a href="#">Pseudo-elements</a> | <a href="#">Working with JSON data</a></p>
+    <p>Week 06: <a href="#">The Chamber Home Page Enhancements</a></p>
+    </section>
+
+    <section class="info">
+    <h3>Information</h3>
+    <p id="location">Loading...</p>
+    <p id="weather-description">Loading weather...</p>
+    <p id="weather">🌞 <span class="temp-area">Loading...</span></p>
+    <p>Page Visits: <span id="pageVisits">0</span></p>
+    </section>
+</main>
 </div>
 
 <footer>
-    <p>&copy; <span id="currentyear"></span> 🌴 Kehinde Ojo 🌴 West Warwick, RI</p>
-    <p>Last modified: <span id="lastModifiedMobile"></span></p>
+<p>&copy; <span id="currentyear"></span> 🌴 Kehinde Ojo 🌴 West Warwick, RI</p>
+<p><span id="lastModifiedMobile"></span></p>
 </footer>
 </body>
 </html>
