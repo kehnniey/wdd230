@@ -25,3 +25,24 @@ function getLastModified() {
 
 document.getElementById("lastModifiedMobile").innerHTML = getLastModified();
 
+
+// Hamburger Menu Toggle
+// document.addEventListener('DOMContentLoaded', () => {
+//   const menuButton = document.querySelector("#menu");
+//   const navList = document.querySelector("#nav-list");
+
+//   if (menuButton && navList) {
+//       menuButton.addEventListener("click", () => {
+//           navList.classList.toggle("open");
+//           menuButton.classList.toggle("open");
+//       });
+//   }
+// });
+
+const hamButton = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
+
+hamButton.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamButton.classList.toggle('open');
+});
