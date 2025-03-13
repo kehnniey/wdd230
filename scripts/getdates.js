@@ -5,11 +5,23 @@ currentYearElements.forEach((el) => {
   el.textContent = currentYear;
 });
 
-// Last modified date (only show the date, no time)
-const lastModified = new Date(document.lastModified);
-const formattedDate = lastModified.toLocaleDateString(); // Format as local date
-const lastModifiedElement = document.getElementById("lastModifiedMobile");
 
-if (lastModifiedElement) {
-  lastModifiedElement.textContent = `Last Modified: ${formattedDate}`;
+function getLastModified() {
+  const lastModified = new Date(document.lastModified);
+  const options = {
+    weekday: 'short', 
+    year: 'numeric', 
+    month: 'short', 
+    day: 'numeric', 
+    hour: '2-digit',  
+    minute: '2-digit',
+    second: '2-digit',
+    timeZone: 'America/New_York',  
+    timeZoneName: 'short'
+  };
+  const formattedDate = lastModified.toLocaleDateString('en-US', options);
+  return `Last Modified: ${formattedDate}`;
 }
+
+document.getElementById("lastModifiedMobile").innerHTML = getLastModified();
+
