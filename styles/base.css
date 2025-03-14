@@ -145,13 +145,10 @@ footer {
 /* Hamburger */
 /* small view navigation */
 #menu {
-	font-size: 1.5rem;
-	border: 0;
-	background: none;
-	color: #000;
- 	position: ;
-  top: 1rem;             
-	right: 1rem;
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: #000;
 }
 
 #menu::before {
@@ -184,7 +181,7 @@ footer {
 	font-weight: 700;
 }
 
-/* when the button is clicked - the open class is toggled (added/removed) */
+
 .open a {
 	display: block;
 }
