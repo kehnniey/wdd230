@@ -69,9 +69,9 @@ header {
 
 .profile-subheader {
   display: flex;
-  align-items: center; /* Centers vertically */
+  align-items: center; 
   justify-content: center;
-  gap: 1rem; /* Space between h2 and img */
+  gap: 1rem; 
 }
 
 .profile-subheader h2 {
@@ -81,7 +81,7 @@ header {
 .profile-subheader img {
   max-width: 150px;
   height: auto;
-  border-radius: 50%; /* Optional: makes image circular */
+  border-radius: 50%; 
 }
 
 
