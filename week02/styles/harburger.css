@@ -33,7 +33,13 @@ nav {
     /* top: 1rem;             
 	right: 1rem; */
 }
-
+#menu {
+	font-size: 1.5rem;
+	background: none;
+	border: none;
+	color: #000;
+	/* Removed position: absolute, top, and right to keep it in normal flow */
+  }
 #menu::before {
 	content: "☰";
 }
