@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,9 @@
   <meta name="description" content="WDD 230 - Web Frontend Development">
   <meta name="author" content="Kehinde Ojo">
 
-  
-  <!-- Open Graph Meta Tags -->
- <meta property="og:type" content="website" />
- <meta property="og:url" content="https://kehnniey.github.io/wdd230/" />
- <meta property="og:title" content="Kehinde Ojo - WDD 230 Course Homepage" />
- <meta property="og:image" content="https://kehnniey.github.io/wdd230/images/profile.jpg" />
-
-
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
@@ -28,54 +20,66 @@
   <!-- JS -->
   <script src="scripts/getdates.js" defer></script>
   <script src="scripts/weather.js" defer></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kehnniey.github.io/wdd230/" />
+  <meta property="og:title" content="Kehinde Ojo - WDD 230 Course Homepage" />
+  <meta property="og:image" content="https://kehnniey.github.io/wdd230/images/profile.jpg" />
 </head>
 
 <body>
 
-<div>
-  <header>
-    <!-- Ensure h1 is at the top -->
-    <h1 class="profile-header">WDD230: Course Home Page</h1>
-    <h2 class="student-name">Kehinde Ojo</h2>
-    <h2 class="profile-description">Student Profile</h2>
-    <img src="images/profile.jpg" alt="Profile Picture">
-  </header>
+  
 
-  <button id="menu"></button>
-  <nav>
-    <ul class="navigation">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Chamber</a></li>
-      <li><a href="#">Site Plan</a></li>
-      <li><a href="#">Form</a></li>
-    </ul>
-  </nav>
+  <div>
+    
+    <header class="profile-header">
+      <h1>WDD230: Course Home Page</h1>
+      <div class="profile-subheader">
+        <h2>Kehinde Ojo</h2>
+        <img src="images/profile.jpg" alt="Profile Picture">
+      </div>
+    </header>
+    
+    
 
-  <main>
-    <section class="learning-activities">
-      <h3>Learning Activities</h3>
-      <p>Week 01: <a href="#">Layout</a> | <a href="#">Media Query</a> | <a href="#">JS Pen</a></p>
-      <p>Week 02: <a href="https://codepen.io/kehnniey/pen/NPWwbPe" target="_blank">Responsive Menu</a></p>
-      <p>Week 03: <a href="#">Webp Image Format</a> | <a href="#">Lazy Loading</a></p>
-      <p>Week 04: <a href="#">CSS Pseudo-classes</a> | <a href="#">CSS Combinators</a></p>
-      <p>Week 05: <a href="#">Pseudo-elements</a> | <a href="#">Working with JSON data</a></p>
-      <p>Week 06: <a href="#">The Chamber Home Page Enhancements</a></p>
-    </section>
+    <button id="menu"></button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">Site Plan</a></li>
+        <li><a href="#">Form</a></li>
+      </ul>
+    </nav>
 
-    <section class="info">
-      <h3>Information</h3>
-      <p id="location">Loading...</p>
-      <p id="weather-description">Loading weather...</p>
-      <p id="weather">🌞 <span class="temp-area">Loading...</span></p>
-      <p>Page Visits: <span id="pageVisits">0</span></p>
-    </section>
-  </main>
-</div>
+    <main>
+      <section class="learning-activities">
+        <h3>Learning Activities</h3>
+        <p>Week 01: <a href="#">Layout</a> | <a href="#">Media Query</a> | <a href="#">JS Pen</a></p>
+        <p>Week 02: <a href="https://codepen.io/kehnniey/pen/NPWwbPe" target="_blank">Responsive Menu</a></p>
+        <p>Week 03: <a href="#">Webp Image Format</a> | <a href="#">Lazy Loading</a></p>
+        <p>Week 04: <a href="#">CSS Pseudo-classes</a> | <a href="#">CSS Combinators</a></p>
+        <p>Week 05: <a href="#">Pseudo-elements</a> | <a href="#">Working with JSON data</a></p>
+        <p>Week 06: <a href="#">The Chamber Home Page Enhancements</a></p>
+      </section>
 
-<footer>
-  <p>&copy; <span id="currentyear"></span> 🌴 Kehinde Ojo 🌴 West Warwick, RI</p>
-  <p><span id="lastModifiedMobile"></span></p>
-</footer>
+      <section class="info">
+        <h3>Information</h3>
+        <p id="location">Loading...</p>
+        <p id="weather-description">Loading weather...</p>
+        <p id="weather">🌞 <span class="temp-area">Loading...</span></p>
+        <p>Page Visits: <span id="pageVisits">0</span></p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> 🌴 Kehinde Ojo 🌴 West Warwick, RI</p>
+    <p><span id="lastModifiedMobile"></span></p>
+  </footer>
 
 </body>
+
 </html>

@@ -39,7 +39,7 @@ body {
 }
 
 /* Header Layout */
-header, h1, footer {
+header, footer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -54,15 +54,37 @@ header {
   text-align: center;
 }
 
-.profile-header {
-  margin-bottom: 0; /* Remove any default margin at the bottom */
+.profile-header { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
 }
-/* Name Styling */
-header h1 {
-  font-size: 1rem;
-  font-weight: bold;
+
+.profile-header h1 {
+  margin-bottom: 0.5rem; /* Space between h1 and h2/img */
+}
+
+.profile-subheader {
+  display: flex;
+  align-items: center; /* Centers vertically */
+  justify-content: center;
+  gap: 1rem; /* Space between h2 and img */
+}
+
+.profile-subheader h2 {
   margin: 0;
 }
+
+.profile-subheader img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%; /* Optional: makes image circular */
+}
+
+
 
 /* Profile Image */
 header img {
@@ -192,7 +214,14 @@ footer {
 	display: block;
 }
 
-
+.student-name img {
+	font-size: 1rem;
+  display: block;
+  margin: 0 auto;
+  max-width: 150px; /* Adjust size as needed */
+  border-radius: 50%; 
+  
+}
 
 
 
