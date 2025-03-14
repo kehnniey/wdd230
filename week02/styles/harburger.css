@@ -30,8 +30,8 @@ nav {
 	background: none;
 	color: #000;
  	/* position:  */
-    top: 1rem;             
-	right: 1rem;
+    /* top: 1rem;             
+	right: 1rem; */
 }
 
 #menu::before {
