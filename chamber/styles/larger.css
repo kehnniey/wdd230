@@ -1,0 +1,105 @@
+/* Responsive for larger screens */
+@media (min-width: 768px) {
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+  
+    .spotlight-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .hero-text h2 {
+      font-size: 3rem;
+    }
+  
+    .hero-text p {
+      font-size: 1.5rem;
+    }
+    /* Header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  nav {
+    flex: 1;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  nav li a {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav li a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Hero becomes a two-column layout */
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .hero img {
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .hero-text {
+    position: static;
+    transform: none;
+    text-align: left;
+    color: var(--primary-color);
+    text-shadow: none;
+  }
+  
+  /* CTA Button centered with padding */
+  .cta {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  /* Grid layout for weather and events */
+  section.weather,
+  section.events {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+  }
+  
+  section.weather {
+    margin-right: 2%;
+  }
+  
+  /* Spotlights in a row */
+  .spotlights {
+    margin-top: 2rem;
+  }
+  
+  .spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  }
+  

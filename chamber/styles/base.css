@@ -1,0 +1,128 @@
+/* Base Styles */
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #cdd1da;
+    --accent-color: #ffff;
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    background-color: var(--accent-color);
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  
+  header,
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+  }
+  
+  a {
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .hero {
+    position: relative;
+    overflow: hidden;
+    max-height: 450px;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 450px;
+    filter: brightness(70%);
+  }
+  
+  /* Text over image */
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  
+  .hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+  
+  
+  .cta {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .join-btn {
+    background: white;
+    color: var(--secondary-color);
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  .events, .weather, .spotlights {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .weather-card {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0;
+  }
+  
+  .spotlight-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .spotlight {
+    background-color: #f9f9f9;
+    border-left: 5px solid var(--secondary-color);
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  
+  
