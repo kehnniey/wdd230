@@ -17,20 +17,23 @@
     
       #menu {
         display: none; /* Hide hamburger button on large screens */
+      
       }
     
       .navigation {
         flex-direction: row; /* Horizontal navigation links on larger screens */
+    
       }
     
       .navigation a {
-        display: block;
-        flex: 1 1 100%;
+        display: flex   ;
+      
       }
     nav ul {
       display: flex;
       justify-content: center;
       gap: 1rem;
+     
     }
   
     .spotlight-grid {

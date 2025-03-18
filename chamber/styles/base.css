@@ -162,11 +162,7 @@
     content: "X"; /* Close icon */
   }
   
-  .navigation {
-    display: flex;
-    list-style: none;
-    padding: 0;
-  }
+
   
   .navigation a {
     text-decoration: none;
@@ -179,14 +175,20 @@
   }
   
   /* Mobile Navigation */
+  nav {
+    background-color: #143097;
+    width: 100%;
+  }
+
   .navigation {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     list-style: none;
-    /* background-color: #333; */
-    color: #fff;
-    transition: max-height 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+    justify-content:space-around;
+    flex-direction: column;    
+     /* or space-around / space-between / flex-end */
+    background-color: transparent; /* Remove this if it was set */
   }
   
   .navigation a {
