@@ -113,17 +113,17 @@
   .event-weather-container {
     display: flex;
     gap: 2rem;
-    flex-wrap: wrap; /* allows stacking on small screens */
+    flex-wrap: wrap; 
     justify-content: space-between;
   }
   
-  /* Optional: set equal widths */
+  
   .events, .weather {
     flex: 1 1 45%;
   }
   
   .events ul {
-    padding-left: 1.5rem; /* optional for better indentation */
+    padding-left: 1.5rem; 
   }
   
   .weather-card {
