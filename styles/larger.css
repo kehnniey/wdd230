@@ -20,9 +20,11 @@
     
       .learning-activities {
         grid-column: 1;
+      
       }
       .info {
         grid-column: 2;
+       
       }
     
       header {
@@ -71,3 +73,14 @@
    
   }
   
+  /* Responsive Layout: Side-by-Side on Larger Screens */
+@media screen and (min-width: 600px) {
+  .learning-activities,
+  .info {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+}

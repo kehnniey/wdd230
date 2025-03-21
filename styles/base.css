@@ -1,7 +1,8 @@
-/* Google Font */
+/* ================================================
+   Google Fonts & Root Variables
+================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Root Variables */
 :root {
   --primary-color: #036;
   --accent-color: #f8b400;
@@ -10,14 +11,15 @@
   --card-bg: #fff;
 }
 
-/* Global Reset */
+/* ================================================
+   Global Reset & Base Styles
+================================================ */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Body Styling */
 body {
   display: flex;
   flex-direction: column;
@@ -29,14 +31,16 @@ body {
   padding: 1rem;
 }
 
-/* Container */
 .container {
   max-width: 100%;
   gap: 10rem;
 }
 
-/* Header & Footer Layout */
-header, footer {
+/* ================================================
+   Header & Footer
+================================================ */
+header,
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +59,16 @@ header img {
   border: 2px solid white;
 }
 
-/* Profile Section */
+footer {
+  margin: 2rem auto 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ================================================
+   Profile Header
+================================================ */
 .profile-header {
   display: flex;
   flex-direction: column;
@@ -84,7 +97,9 @@ header img {
   border-radius: 50%;
 }
 
-/* Navigation */
+/* ================================================
+   Navigation
+================================================ */
 nav ul {
   display: flex;
   flex-direction: column;
@@ -107,7 +122,9 @@ nav a:focus {
   color: #000;
 }
 
-/* Hamburger Navigation (Mobile) */
+/* ================================================
+   Hamburger Navigation (Mobile)
+================================================ */
 #menu {
   font-size: 1.5rem;
   border: 0;
@@ -150,13 +167,67 @@ nav a:focus {
   display: block;
 }
 
+/* ================================================
+   Main & Layout
+================================================ */
 main {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   align-items: stretch;
 }
-/* Hero Image */
+
+.learning-activities,
+.info {
+  flex: 1 1 48%;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.learning-activities {
+  margin-right: 1%;
+}
+
+
+
+.learning-activities h3,
+.info h3 {
+  background-color: #00598c;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Top-right Info Box (Page Visits + Local Message) */
+.info {
+  position: relative;
+}
+
+.info-top-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.info p:last-of-type {
+  margin-top: auto;
+}
+
+/* ================================================
+   Hero Image
+================================================ */
 .temple-hero {
   position: relative;
   width: 100%;
@@ -172,88 +243,28 @@ main {
 
 .temple-label {
   position: absolute;
-  bottom: 1rem;
+  top: 1rem;
   left: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(126, 198, 232, 0.5);
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   border-radius: 0.5rem;
 }
 
-/* Cards, Learning Activities, Info */
-.card,
-.learning-activities,
-.info {
+/* ================================================
+   Cards (if used outside main)
+================================================ */
+.card {
   background-color: var(--card-bg);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-.learning-activities,
-.info {
-  flex: 1 1 48%;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 3rem;
-}
-
-
-
-.learning-activities h3,
-.info h3 {
-  background-color: #00598c;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-}
-
-/* Push weather and page visits to bottom */
-.info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.info p:last-of-type {
-  margin-top: auto;
-}
-/* Responsive Layout: Side-by-Side on Larger Screens */
-@media screen and (min-width: 600px) {
-  .learning-activities,
-  .info {
-    display: inline-block;
-    vertical-align: top;
-    width: 49%;
-    box-sizing: border-box;
-    padding: 1rem;
-  }
-
-  .learning-activities {
-    margin-right: 1%;
-  }
-}
-
-/* Full-width on Mobile */
-@media screen and (max-width: 599px) {
-  .learning-activities,
-  .info {
-    width: 100%;
-    padding: 1rem 0;
-  }
-}
-
-/* Map */
+/* ================================================
+   Map Section
+================================================ */
 .map-container {
   width: 100%;
   margin: 0;
@@ -267,11 +278,22 @@ main {
   border: none;
 }
 
-/* Footer */
-footer {
-  margin: 2rem auto 0;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
+/* ================================================
+   Responsive (Mobile)
+================================================ */
+@media screen and (max-width: 599px) {
+  .learning-activities,
+  .info {
+    width: 100%;
+    padding: 1rem 0;
+  }
 }
 
+@media screen and (max-width: 599px) {
+  .profile-header h1, h2 {
+    font-size: 1.5rem; 
+    text-align: center;
+    white-space: nowrap;       
+    overflow: hidden;          
+  }
+}

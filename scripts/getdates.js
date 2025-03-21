@@ -46,3 +46,21 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
+
+
+// Local Storage:
+
+  // Set and Get from localStorage
+  // const messageKey = "learningMessage";
+
+  // // If not stored yet, set a default message
+  // if (!localStorage.getItem(messageKey)) {
+  //   localStorage.setItem(messageKey, "You’re viewing Learning Activities from localStorage!");
+  // }
+
+  // // Display the stored message
+  // const localMessageElement = document.getElementById("localMessage");
+  // if (localMessageElement) {
+  //   localMessageElement.textContent = localStorage.getItem(messageKey);
+  // }
+
