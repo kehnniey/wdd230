@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kehinde Ojo - WDD 230 - Web Frontend Development</title>
   <meta name="description" content="WDD 230 - Web Frontend Development">
   <meta name="author" content="Kehinde Ojo">
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:type" content="Website" /> 
+  <!-- Open Graph -->
+  <meta property="og:type" content="Website" />
   <meta property="og:url" content="https://kehnniey.github.io/wdd230/" />
   <meta property="og:title" content="Kehinde Ojo - WDD 230 Course Homepage" />
   <meta property="og:image" content="https://kehnniey.github.io/wdd230/images/profile.jpg" />
@@ -17,15 +17,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/larger.css">
-  
-  <link rel="icon" href="favicon.ico">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="icon" href="favicon.ico" />
+
   <!-- JS -->
   <script src="scripts/getdates.js" defer></script>
   <script src="scripts/weather.js" defer></script>
+  <script src="scripts/visitcounter.js" defer></script>
 </head>
 <body>
   <div>
@@ -34,15 +35,13 @@
       <div class="profile-subheader">
         <div class="subheader-text">
           <h2>Kehinde Ojo</h2>
-          <h2></h2> 
         </div>
-        <!-- <img src="images/profile.jpg" alt="Profile Picture"> -->
         <a href="week03/images/landscape.webp" target="_blank">
-          <img src="week03/images/landscape.webp" alt="Landscape Image">
+          <img src="week03/images/landscape.webp" alt="Landscape Image" loading="lazy">
         </a>
-        
       </div>
     </header>
+
     <button id="menu"></button>
     <nav>
       <ul class="navigation">
@@ -52,7 +51,19 @@
         <li><a href="#">Form</a></li>
       </ul>
     </nav>
+    
     <main>
+   <!-- Temple Hero Image with Overlay -->
+   <section class="temple-hero">
+    <picture>
+      <source srcset="images/temple-medium.webp" media="(min-width: 400px)">
+      <source srcset="images/temple-large.webp" media="(max-width: 960px)">
+      <img src="images/temple-small.webp" alt="Aba Nigeria Temple" loading="lazy">
+    </picture>
+    <div class="temple-label">Aba Nigeria Temple</div>
+  </section>
+
+
       <section class="learning-activities">
         <h3>Learning Activities</h3>
         <p>Week 01: <a href="#">Layout</a> | <a href="#">Media Query</a> | <a href="#">JS Pen</a></p>
@@ -62,6 +73,7 @@
         <p>Week 05: <a href="#">Pseudo-elements</a> | <a href="#">Working with JSON data</a></p>
         <p>Week 06: <a href="#">The Chamber Home Page Enhancements</a></p>
       </section>
+
       <section class="info">
         <h3>Information</h3>
         <p id="location">Loading...</p>
@@ -69,12 +81,26 @@
         <p id="weather">🌞 <span class="temp-area">Loading...</span></p>
         <p>Page Visits: <span id="pageVisits">0</span></p>
       </section>
+
+      <!-- Google Map Embed -->
+      <section class="map-container">
+      <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.304270048077!2d7.337874374942297!3d5.123762038785048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1067c52b27e3fa05%3A0x80b9d5d4dc347fc4!2sAba%20Nigeria%20Temple!5e0!3m2!1sen!2sus!4v1710853353762!5m2!1sen!2sus"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+    
     </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> 🌴 Kehinde Ojo 🌴 West Warwick, RI</p>
+      <p><span id="lastModifiedMobile"></span></p>
+    </footer>
   </div>
-  <footer>
-    <p>&copy; <span id="currentyear"></span> 🌴 Kehinde Ojo 🌴 West Warwick, RI</p>
-    <p><span id="lastModifiedMobile"></span></p>
-  </footer>
 </body>
 </html>
-!
