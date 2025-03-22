@@ -298,6 +298,61 @@ main {
   }
 }
 
+/* ================================================
+   Dark Mode (Respects System Preference)
+================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --card-bg: #1e1e1e;
+    --accent-color: #bb86fc;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  header,
+  footer,
+  nav ul,
+  .navigation {
+    background-color: #1e1e1e;
+    color: var(--text-color);
+  }
+
+  nav a {
+    color: var(--text-color);
+  }
+
+  nav a:hover,
+  nav a:focus {
+    background-color: var(--accent-color);
+    color: #000;
+  }
+
+  .learning-activities h3,
+  .info h3 {
+    background-color: #333;
+    color: var(--text-color);
+  }
+
+  .temple-label {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+
+  .info-top-right {
+    color: var(--text-color);
+  }
+
+  .card {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+  }
+}
+
 
 
 
