@@ -299,7 +299,7 @@ main {
 }
 
 /* ================================================
-   Dark Mode (Respects System Preference)
+   Dark Mode 
 ================================================ */
 @media (prefers-color-scheme: dark) {
   :root {
