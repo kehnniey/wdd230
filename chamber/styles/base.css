@@ -234,11 +234,16 @@
 
 .sidebar {
   background-color: #f4f4f4;
-  padding: 1rem;
+  padding-right:  5px;
   border-radius: 8px;
   font-size: small;
 
 }
+
+.attractions {
+  padding-left: 20px; 
+}
+
 
 .photo-gallery {
   display: grid;
@@ -267,11 +272,12 @@
   transform: scale(1.05);
 }
 
-/* Center image spans 2 rows and is centered vertically */
+
 .photo-gallery .center {
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
 }
+
 
 
