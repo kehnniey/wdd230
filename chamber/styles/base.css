@@ -30,7 +30,7 @@
   }
    h2 {
     
-    color:  white;
+    color:  rgb(19, 19, 19);
     font-size: 20px;
    
   }
@@ -194,7 +194,7 @@
     justify-content:space-around;
     flex-direction: column;    
      /* or space-around / space-between / flex-end */
-    background-color: transparent; /* Remove this if it was set */
+    background-color: transparent; 
   }
   
   .navigation a {
@@ -219,22 +219,6 @@
 /* ================================================
   Discover
 ================================================ */
-/* .discover-layout {
-  display: block;
-  padding: 1rem;
-  font-family: var(--font-body);
-  background-color: var(--accent-color);
-  color: rgb(28, 28, 27);  
-  line-height: 1.6;
-  margin: 1em;
-  
-}
-
-.photo-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-} */
 
 .discover-layout {
   display: grid;
@@ -252,19 +236,23 @@
   background-color: #f4f4f4;
   padding: 1rem;
   border-radius: 8px;
+  font-size: small;
+
 }
 
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
 }
 
 .photo-gallery figure {
   margin: 0;
   text-align: center;
+  font-size: small;
+  
 }
 
 .photo-gallery img {
