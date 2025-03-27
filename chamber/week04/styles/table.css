@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+table {
+    width: 30%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #171616; 
+    color: white;
+    text-align: center;
+    padding: 1em 5px; 
+}
+
+
+th:first-child {
+    background-color: #171616; 
+   
+}
+
+th, td {
+    padding: 12px;
+   
+}
+
+th:not(:first-child) {
+    background-color: #454343;
+    color: white;
+}
+
+
+tbody tr:nth-child(odd) {
+    background-color: #cacdce;
+}
