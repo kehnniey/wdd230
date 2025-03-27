@@ -1,12 +1,12 @@
 :root {
+    --primary-bg: #F4F4F4;
+    --form-bg: white;
     --primary-color: #2C3E50;
-    --secondary-color: #E67E22;
-    --font-family: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: var(--font-family);
-    background-color: #F4F4F4;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-bg);
     color: var(--primary-color);
     margin: 0;
     padding: 0;
@@ -19,12 +19,8 @@ header, footer {
     text-align: center;
 }
 
-main {
-    margin: 2rem;
-}
-
 form {
-    background-color: white;
+    background-color: var(--form-bg);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -47,7 +43,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="ran
 }
 
 button[type="submit"] {
-    background-color: var(--secondary-color);
+    background-color: #E67E22;
     color: white;
     padding: 0.8rem;
     width: 100%;
@@ -58,9 +54,4 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #D35400;
-}
-
-output {
-    font-weight: bold;
-    margin-left: 10px;
 }
