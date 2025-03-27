@@ -13,14 +13,23 @@ table {
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 }
 
-caption {
+caption:first-of-type {
     font-size: 1.2em;
     font-weight: bold;
     background-color: #171616; 
     color: white;
     text-align: center;
     padding: 1em 5px; 
+   
 }
+
+caption:last-of-type {
+    caption-side: bottom; 
+    color: #171616; 
+    font-size: 0.8em;
+    font-weight: normal; 
+}
+
 
 
 th:first-child {
