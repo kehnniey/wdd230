@@ -1,82 +1,66 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kehinde Ojo - WDD 230 - Form</title>
+  <title>Kehinde Ojo - WDD 230 - Web Frontend Development: Form Page</title>
   <meta name="description" content="WDD 230 - Web Frontend Development">
   <meta name="author" content="Kehinde Ojo">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
     
-    <!-- Google Fonts Preconnect Links -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    
-    
- <link rel="stylesheet" href="styles/form.css"> 
- <script defer src="scripts/form.js"></script>
 </head>
 <body>
+   
+    <header>
+        <h1>WDD 230 - Web Frontend Development</h1>
+        <nav>
+            <!-- <button id="menu"></button> -->
+            <nav>
+              <!-- <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Site Plan</a></li>
+                <li><a href="#">Form</a></li>
+              </ul> -->
+            </nav>
+        </nav>
+    </header>
+
     <main>
-        <h1>Product Review Form</h1>
-        <p><span class="required">*</span> Indicates a required field</p>
-        <form method="get" action="review.html">
-            <!-- Product Name -->
-            <label for="product-name">Product Name <span class="required">*</span>:</label>
-            <select id="product-name" name="product" required>
-                <option value="" disabled selected>Select a Product ...</option>
-                <!-- Dynamic options will be populated via JavaScript -->
-            </select>
+        <h2>Create an Account</h2>
+        <form action="record.html" method="get">
+            <!-- Username Field -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-            <!-- Overall Rating -->
-            <fieldset>
-                <legend>Overall Rating <span class="required">*</span>:</legend>
-                <label>
-                    <input type="radio" id="star1" name="rating" value="1" required> ☆
-                </label>
-                <label>
-                    <input type="radio" id="star2" name="rating" value="2"> ☆☆
-                </label>
-                <label>
-                    <input type="radio" id="star3" name="rating" value="3"> ☆☆☆
-                </label>
-                <label>
-                    <input type="radio" id="star4" name="rating" value="4"> ☆☆☆☆
-                </label>
-                <label>
-                    <input type="radio" id="star5" name="rating" value="5"> ☆☆☆☆☆
-                </label>
-            </fieldset>
+            <!-- Password Field -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required pattern="^[a-zA-Z0-9]{8,}$" title="Password must be at least 8 characters long and alphanumeric.">
 
-            <!-- Date of Installation -->
-            <label for="installation-date">Date of Installation <span class="required">*</span>:</label>
-            <input type="date" id="installation-date" name="installation_date" required>
+            <!-- Confirm Password Field -->
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
 
-            <!-- Useful Features -->
-            <fieldset>
-                <legend>Which features did you find useful? (Check all that apply):</legend>
-                <label><input type="checkbox" id="feature1" name="features" value="Feature1"> Durability</label>
-                <label><input type="checkbox" id="feature2" name="features" value="Feature2"> Ease of Use</label>
-                <label><input type="checkbox" id="feature3" name="features" value="Feature3"> Performance</label>
-                <label><input type="checkbox" id="feature4" name="features" value="Feature4"> Design</label>
-            </fieldset>
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu" title="Please enter a valid email address ending with @byui.edu.">
 
-            <!-- Written Review -->
-            <label for="review">Written Review (optional):</label>
-            <textarea id="review" name="review"></textarea>
-
-            <!-- User Name -->
-            <label for="user-name">Your Name (optional):</label>
-            <input type="text" id="user-name" name="user_name">
+            <!-- Page Rating -->
+            <label for="page-rating">Page Rating (1-10):</label>
+            <input type="range" id="page-rating" name="page-rating" min="1" max="10" step="1" oninput="this.nextElementSibling.value = this.value">
+            <output>5</output>
 
             <!-- Submit Button -->
-            <button type="submit">Submit Review</button>
+            <button type="submit">Submit</button>
         </form>
     </main>
 
     <footer>
-        <p>&copy; <span id="current-year"></span> Kehinde O. Ojo. All rights reserved. Last modified: <span id="last-modified"></span></p>
+        <p>&copy; <span id="currentyear"></span> 🌴 Kehinde Ojo 🌴 West Warwick, RI</p>
+      <p><span id="lastModifiedMobile"></span></p>
     </footer>
+
+   
 </body>
 </html>
