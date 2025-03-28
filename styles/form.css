@@ -1,9 +1,9 @@
 /* Define CSS variables in :root */
 :root {
-    --primary-color: #2C3E50;  /* Dark color for header and footer */
-    --secondary-color: #E67E22; /* Orange color for hover states */
-    --text-color: #fff; /* White text color */
-    --font-size: 1.1rem; /* Font size for links */
+    --primary-color: #2C3E50;  
+    --secondary-color: #E67E22; 
+    --text-color: #fff; 
+    --font-size: 1.1rem; 
   }
   
   /* Header Styles */
