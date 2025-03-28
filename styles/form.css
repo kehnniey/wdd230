@@ -1,7 +1,15 @@
-/* Header Styles */
-header {
-    background-color: #2C3E50; /* Darker header background */
-    color: #fff;
+/* Define CSS variables in :root */
+:root {
+    --primary-color: #2C3E50;  /* Dark color for header and footer */
+    --secondary-color: #E67E22; /* Orange color for hover states */
+    --text-color: #fff; /* White text color */
+    --font-size: 1.1rem; /* Font size for links */
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
     padding: 20px;
     text-align: center;
   }
@@ -28,14 +36,14 @@ header {
   }
   
   .navigation li a {
-    color: #fff; /* White text color */
+    color: var(--text-color);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: var(--font-size);
     padding: 5px 10px;
   }
   
   .navigation li a:hover {
-    background-color: #E67E22; /* Orange hover background */
+    background-color: var(--secondary-color);
     border-radius: 5px;
   }
   
@@ -61,20 +69,20 @@ header {
   }
   
   form button {
-    background-color: #2C3E50; /* Matching button color with header */
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
     cursor: pointer;
   }
   
   form button:hover {
-    background-color: #E67E22; /* Orange hover background for button */
+    background-color: var(--secondary-color);
   }
   
   /* Footer Styles */
   footer {
-    background-color: #2C3E50; /* Matching footer with header */
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 10px;
   }
