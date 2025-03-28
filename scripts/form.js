@@ -11,7 +11,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
     }
 });
 
-
+// Date
 const currentYearElements = document.querySelectorAll("#currentyear, .currentyear");
 const currentYear = new Date().getFullYear();
 

@@ -1,57 +1,89 @@
-:root {
-    --primary-bg: #F4F4F4;
-    --form-bg: white;
-    --primary-color: #2C3E50;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--primary-bg);
-    color: var(--primary-color);
-    margin: 0;
-    padding: 0;
-}
-
-header, footer {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
+/* Header Styles */
+header {
+    background-color: #2C3E50; /* Darker header background */
+    color: #fff;
+    padding: 20px;
     text-align: center;
-}
-
-form {
-    background-color: var(--form-bg);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: auto;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-input[type="text"], input[type="password"], input[type="email"], input[type="range"] {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button[type="submit"] {
-    background-color:var(--primary-color);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    margin-top: 10px;
+  }
+  
+  .navigation {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Center align the navigation */
+  }
+  
+  .navigation li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navigation li a {
+    color: #fff; /* White text color */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+  }
+  
+  .navigation li a:hover {
+    background-color: #E67E22; /* Orange hover background */
+    border-radius: 5px;
+  }
+  
+  /* Form Styles */
+  main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin: 10px 0 5px;
+  }
+  
+  form input, form button {
+    padding: 10px;
+    margin: 5px 0 15px;
+  }
+  
+  form button {
+    background-color: #2C3E50; /* Matching button color with header */
     color: white;
-    padding: 0.8rem;
-    width: 100%;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #D35400;
-}
+  }
+  
+  form button:hover {
+    background-color: #E67E22; /* Orange hover background for button */
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #2C3E50; /* Matching footer with header */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer span {
+    font-weight: bold;
+  }
+  
