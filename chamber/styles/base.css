@@ -1,221 +1,220 @@
-/* Base Styles */
 :root {
-    --primary-color: #2C3E50;
-    --secondary-color: #cdd1da;
-    --accent-color: #ffff;
-    --font-heading: 'Roboto', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: var(--font-body);
-    background-color: var(--accent-color);
-    color: yellow;  
-    line-height: 1.6;
-  }
-  
-  /* Header and Footer */
-  header,
-  footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-   h2 {
-    
-    color:  rgb(19, 19, 19);
-    font-size: 20px;
-   
-  }
-  
-  h1, h3, h4 {
-    font-family: var(--font-heading);
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-  }
-  
-  a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    
-  }
-  
-  main {
-    padding: 1rem;
-  }
-  
-  /* Hero Section */
-  .hero {
-    position: relative;
-    overflow: hidden;
-    max-height: 450px;
-  }
-  
-  .hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    max-height: 450px;
-    filter: brightness(70%);
-  }
-  
-  /* Text over image */
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-  }
-  
-  .hero-text h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .hero-text p {
-    font-size: 1.2rem;
-  }
-  
-  /* Call to Action */
-  .cta {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin: 2rem 0;
-  }
-  
-  .join-btn {
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 0.75rem 1.25rem;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 1rem;
-  }
-  
-  /* Section Styling */
-  .events, .weather, .spotlights {
-    margin: 2rem 0;
-    padding: 1rem;
-    background: var(--primary-color);
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(23, 154, 101, 0.1);
-  }
-  .event-weather-container {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap; 
-    justify-content: space-between;
-  }
-  
-  
-  .events, .weather {
-    flex: 1 1 45%;
-  }
-  
-  .events ul {
-    padding-left: 1.5rem; 
-  }
-  
-  .weather-card {
-    text-align: center;
-    font-weight: bold;
-    padding: 1rem 0;
-  }
-  
-  .spotlight-grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-  }
-  
-  .spotlight {
-    background-color: #143097;
-    border-left: 5px solid var(--secondary-color);
-    padding: 1rem;
-    border-radius: 4px;
-  }
-  
-  /* Hamburger Navigation */
-  #menu {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #fff;
-    display: block;
-  }
-  
-  #menu::before {
-    content: "☰"; /* Hamburger icon */
-  }
-  
-  #menu.open::before {
-    content: "X"; /* Close icon */
-  }
-  
+  --primary-color: #2C3E50;
+  --secondary-color: #cdd1da;
+  --accent-color: #ffff;
+  --font-heading: 'Roboto', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
 
-  
-  .navigation a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 15px;
-  }
-  
-  .navigation a:hover {
-    background-color: #E67E22;
-  }
-  
-  /* Mobile Navigation */
-  nav {
-    background-color: #143097;
-    width: 100%;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .navigation {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content:space-around;
-    flex-direction: column;    
-     /* or space-around / space-between / flex-end */
-    background-color: transparent; 
-  }
+body {
+  font-family: var(--font-body);
+  background-color: var(--accent-color);
+  color: yellow;  
+  line-height: 1.6;
+}
+
+/* Header and Footer */
+header,
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+ h2 {
   
-  .navigation a {
-    display: none;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-  }
+  color:  rgb(19, 19, 19);
+  font-size: 20px;
+ 
+}
+
+h1, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
   
-  .navigation a:hover {
-    background-color: #bbb;
-    color: #333;
-    font-weight: 700;
-  }
-  
-  /* When the menu is opened, display the links */
-  .open a {
-    display: block;
-  }
-  
+}
+
+main {
+  padding: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  max-height: 450px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 450px;
+  filter: brightness(70%);
+}
+
+/* Text over image */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Call to Action */
+.cta {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.join-btn {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 0.75rem 1.25rem;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Section Styling */
+.events, .weather, .spotlights {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(23, 154, 101, 0.1);
+}
+.event-weather-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+
+
+.events, .weather {
+  flex: 1 1 45%;
+}
+
+.events ul {
+  padding-left: 1.5rem; 
+}
+
+.weather-card {
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+.spotlight-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.spotlight {
+  background-color: #143097;
+  border-left: 5px solid var(--secondary-color);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+/* Hamburger Navigation */
+#menu {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  display: block;
+}
+
+#menu::before {
+  content: "☰"; /* Hamburger icon */
+}
+
+#menu.open::before {
+  content: "X"; /* Close icon */
+}
+
+
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.navigation a:hover {
+  background-color: #E67E22;
+}
+
+/* Mobile Navigation */
+nav {
+  background-color: #143097;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content:space-around;
+  flex-direction: column;    
+   /* or space-around / space-between / flex-end */
+  background-color: transparent; 
+}
+
+.navigation a {
+  display: none;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation a:hover {
+  background-color: #bbb;
+  color: #333;
+  font-weight: 700;
+}
+
+/* When the menu is opened, display the links */
+.open a {
+  display: block;
+}
+
 /* ================================================
   Discover
 ================================================ */
@@ -238,6 +237,11 @@
   border-radius: 8px;
   font-size: small;
 
+}
+
+.sidebar  ul {
+  list-style: none;
+  padding-left: 1em;
 }
 
 /* .attractions {
@@ -279,5 +283,167 @@
   align-self: center;
 }
 
+/* Join & Thank You Pages */
 
+.form-container {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  /* border-radius: 10px; */
+}
 
+.form-section {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #E67E22;
+}
+
+.wf1 fieldset {
+  margin: 2rem 0;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 1px; */
+  padding: .5rem 2%;
+}
+
+.wf1 legend {
+  /* color: #445ba9; */
+  padding: 0 .5rem;
+}
+
+.wf1 label {
+  display: block;
+  padding-top: 1rem;
+  /* color: #9c2c13; */
+  font-size: .9rem;
+}
+
+/* Membership Benefits Section Styling */
+.membership-benefits {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.membership-benefits h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.membership-benefits ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.membership-benefits li {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  background-color: #743d3d;
+  padding: 1rem;
+  border-radius: 5px;
+  color: var(--secondary-color);
+  transition: background-color 0.3s ease;
+}
+
+.membership-benefits li:hover {
+  background-color: #E67E22;
+  color: white;
+}
+
+.membership-benefits li:first-child {
+  background-color: #262727; 
+}
+
+/* Reduced Form Size */
+.form-container,
+.form-section {
+  background-color: var(--primary-color);
+  padding: 1rem 1rem; 
+  border-radius: 10px;
+  color: white;
+  max-width: 60%;
+  /* Reduced width */
+  margin: 2rem auto;
+}
+
+/* input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #E67E22;
+} */
+/* Specific Styling for Thank You Page */
+.thank-you-page {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px; /* Limiting width for better readability */
+  margin: 3rem auto; /* Centering the content */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-page h2 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you-page p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.thank-you-page .button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.thank-you-page .button:hover {
+  background-color: #E67E22; /* Hover effect */
+  color: white;
+}

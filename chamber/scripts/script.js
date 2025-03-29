@@ -62,3 +62,65 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("lastVisit", now);
   }
 });
+
+
+// join-thankyou.js
+
+// // Utility function to get formatted current date and time
+// function getCurrentTimestamp() {
+//   const now = new Date();
+//   return now.toLocaleString(); // e.g., "3/28/2025, 2:15:30 PM"
+// }
+
+// // Populate the timestamp field on join.html
+// function setTimestamp() {
+//   const timestampField = document.getElementById("timestamp");
+//   if (timestampField) {
+//       timestampField.value = getCurrentTimestamp();
+//   }
+// }
+
+// // Validate input pattern for title/position
+// function validateTitle() {
+//   const titleInput = document.getElementById("position");
+//   const pattern = /^[a-zA-Z-\s]{7,}$/;
+//   if (!pattern.test(titleInput.value)) {
+//       alert("Position/Title must be at least 7 characters and contain only letters, hyphens, and spaces.");
+//       titleInput.focus();
+//       return false;
+//   }
+//   return true;
+// }
+
+// // Handle form submission on join.html
+// function validateForm(event) {
+//   if (!validateTitle()) {
+//       event.preventDefault(); // Prevent form submission if validation fails
+//   }
+// }
+
+// // Thank you page logic
+// function displayThankYouMessage() {
+//   const params = new URLSearchParams(window.location.search);
+//   const firstName = params.get("firstName");
+
+//   if (firstName) {
+//       document.getElementById("thankYouMessage").textContent = `Thank you, ${firstName}, for joining the Springfield Chamber of Commerce!`;
+//   }
+// }
+
+// // Initialize scripts on page load
+// document.addEventListener("DOMContentLoaded", () => {
+//   setTimestamp();
+
+//   // Attach event listener to form on join.html
+//   const joinForm = document.getElementById("joinForm");
+//   if (joinForm) {
+//       joinForm.addEventListener("submit", validateForm);
+//   }
+
+//   // Handle thank you page message
+//   if (document.getElementById("thankYouMessage")) {
+//       displayThankYouMessage();
+//   }
+// });
