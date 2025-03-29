@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Springfield Chamber of Commerce - Join</title>
     <meta name="description" content="Join the Springfield Chamber of Commerce to unlock exclusive benefits, including networking opportunities, business promotions, and community support. Choose from NP, Bronze, Silver, or Gold memberships tailored to your business needs." />
@@ -27,7 +27,8 @@
 
     <!-- JS -->
     <script src="scripts/script.js" defer></script>
-    <!-- <script src="scripts/weather.js" defer></script> -->
+
+  
   </head>
 
   <body>
@@ -53,7 +54,9 @@
       <h2>Membership Sign Up Form</h2>
       <section class="form-section">
         <fieldset>
-          <form action="thankyou.html" method="get" class="wf1">
+            <form action="thankyou.html" method="get" class="wf1" onsubmit="addTimestampToUrl(event)">
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
             <fieldset>
               <legend>Applicant Information</legend>
 

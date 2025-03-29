@@ -63,64 +63,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Set the timestamp when the form page loads
+window.onload = function() {
+  // Set the timestamp for the hidden field when the form page is loaded
+  var timestampField = document.getElementById('timestamp');
+  if (timestampField) {
+    var currentTimestamp = new Date().toISOString();
+    timestampField.value = currentTimestamp;
+  }
 
-// join-thankyou.js
+  // On the Thank You page, get the timestamp from the URL and display it
+  if (window.location.pathname.includes("thankyou.html")) {
+    var urlParams = new URLSearchParams(window.location.search);
+    var timestamp = urlParams.get('timestamp');
+    if (timestamp) {
+      document.getElementById('timestampDisplay').innerText = timestamp;
+    } else {
+      document.getElementById('timestampDisplay').innerText = "Timestamp not available";
+    }
+  }
+};
 
-// // Utility function to get formatted current date and time
-// function getCurrentTimestamp() {
-//   const now = new Date();
-//   return now.toLocaleString(); // e.g., "3/28/2025, 2:15:30 PM"
-// }
-
-// // Populate the timestamp field on join.html
-// function setTimestamp() {
-//   const timestampField = document.getElementById("timestamp");
-//   if (timestampField) {
-//       timestampField.value = getCurrentTimestamp();
-//   }
-// }
-
-// // Validate input pattern for title/position
-// function validateTitle() {
-//   const titleInput = document.getElementById("position");
-//   const pattern = /^[a-zA-Z-\s]{7,}$/;
-//   if (!pattern.test(titleInput.value)) {
-//       alert("Position/Title must be at least 7 characters and contain only letters, hyphens, and spaces.");
-//       titleInput.focus();
-//       return false;
-//   }
-//   return true;
-// }
-
-// // Handle form submission on join.html
-// function validateForm(event) {
-//   if (!validateTitle()) {
-//       event.preventDefault(); // Prevent form submission if validation fails
-//   }
-// }
-
-// // Thank you page logic
-// function displayThankYouMessage() {
-//   const params = new URLSearchParams(window.location.search);
-//   const firstName = params.get("firstName");
-
-//   if (firstName) {
-//       document.getElementById("thankYouMessage").textContent = `Thank you, ${firstName}, for joining the Springfield Chamber of Commerce!`;
-//   }
-// }
-
-// // Initialize scripts on page load
-// document.addEventListener("DOMContentLoaded", () => {
-//   setTimestamp();
-
-//   // Attach event listener to form on join.html
-//   const joinForm = document.getElementById("joinForm");
-//   if (joinForm) {
-//       joinForm.addEventListener("submit", validateForm);
-//   }
-
-//   // Handle thank you page message
-//   if (document.getElementById("thankYouMessage")) {
-//       displayThankYouMessage();
-//   }
-// });
+// Function to add the timestamp to the form action URL
+function addTimestampToUrl(event) {
+  event.preventDefault(); // Prevent the form from submitting immediately
+  var form = event.target;
+  var timestamp = document.getElementById('timestamp').value;
+  if (timestamp) {
+    form.action = "thankyou.html?timestamp=" + encodeURIComponent(timestamp); // Append timestamp to the URL
+  }
+  form.submit(); // Submit the form after modifying the action
+}
