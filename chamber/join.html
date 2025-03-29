@@ -1,109 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Springfield Chamber of Commerce - Join</title>
-        <meta name="description" content="Join the Springfield Chamber of Commerce to unlock exclusive benefits, including networking opportunities, business promotions, and community support. Choose from NP, Bronze, Silver, or Gold memberships tailored to your business needs.">
-        <meta name="author" content="Kehinde Ojo" />
-      
-        <!-- Social Media Meta Tags -->
-        <meta property="og:title" content="Springfield Chamber of Commerce" />
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://example.com/images/social-preview.jpg" />
-        <meta property="og:url" content="https://example.com/" />
-        <meta property="og:description" content="Springfield Chamber of Commerce supports local economic development, business networking, and community engagement." />
-        
-                   
-        <!-- Favicon -->
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-      
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-      
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="styles/normalize.css" />
-        <link rel="stylesheet" href="styles/base.css" />
-        <link rel="stylesheet" href="styles/larger.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Springfield Chamber of Commerce - Join</title>
+    <meta name="description" content="Join the Springfield Chamber of Commerce to unlock exclusive benefits, including networking opportunities, business promotions, and community support. Choose from NP, Bronze, Silver, or Gold memberships tailored to your business needs." />
+    <meta name="author" content="Kehinde Ojo" />
 
-        <!-- JS -->
-        <script src="scripts/script.js" defer></script>
-        <!-- <script src="scripts/weather.js" defer></script> -->
-      </head>
-      
-<body>
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Springfield Chamber of Commerce" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://example.com/images/social-preview.jpg" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:description" content="Springfield Chamber of Commerce supports local economic development, business networking, and community engagement." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <!-- JS -->
+    <script src="scripts/script.js" defer></script>
+    <!-- <script src="scripts/weather.js" defer></script> -->
+  </head>
+
+  <body>
     <header>
-        <h1>Join SCC!</h1>
-        
-        <!-- Hamburger Icon Button -->
-        <button id="menu"></button>
-        <!-- Navigation Menu -->
-        
-        <nav>
-          <ul class="navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>      
-      <main>
-        <h2>Membership Sign Up Form</h2>
-        <section class="form-section">
-            <fieldset>
-            <form action="thankyou.html" method="get" class="wf1">
-                <fieldset>
-                <legend>Applicant Information</legend>
+      <h1>Join SCC!</h1>
 
-                <label for="firstName">First Name
-                    <input type="text" id="firstName" name="firstName" required></label>
-                <label for="lastName">Last Name<input type="text" id="lastName" name="lastName" required></label>
-                
-                <label for="email">Email<input type="email" id="email" name="email" placeholder="example@email.com" required></label>
-                <label for="phone">Mobile Phone<input type="tel" id="phone" name="phone" required></label>
-            </fieldset>
+      <!-- Hamburger Icon Button -->
+      <button id="menu"></button>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Membership Sign Up Form</h2>
+      <section class="form-section">
+        <fieldset>
+          <form action="thankyou.html" method="get" class="wf1">
             <fieldset>
-                <legend> Applicant Business/Organization Information</legend>
-                <label for="businessName">Business/Organization Name<input type="text" id="businessName" name="businessName" required></label>
-                <label for="title">Title/Position
-                    <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" title="Only letters, hyphens, and spaces (min. 7 characters)">
-                </label>
-                <label for="description">Business/Organization Description
-                    <textarea id="description" name="description"></textarea>
-                </label>               
-                </fieldset>
-                <fieldset>
-                <label for="membershipLevel">Membership Level
-                    <select id="membershipLevel" name="membershipLevel">
-                        <option value="">Please Select &#9662;</option>
-                        <option value="NP">NP Membership (No Fee)</option>
-                        <option value="Bronze">Bronze Membership</option>
-                        <option value="Silver">Silver Membership</option>
-                        <option value="Gold">Gold Membership</option>
-                    </select>
-                </fieldset>
-                <input type="hidden" id="timestamp" name="timestamp" value="">
-                <button type="submit">Join Now</button>
-            </form>
-            <aside class="membership-benefits">
-                <h2>Membership Benefits</h2>
-                <ul>
-                    <li>NP Membership: Community Support, Networking</li>
-                    <li>Bronze: Event Discounts, Basic Advertising</li>
-                    <li>Silver: Priority Event Access, Premium Advertising</li>
-                    <li>Gold: All Benefits + Exclusive Events</li>
-                </ul>
-            </aside>
-        </section>
-      </main>
-      
-  <footer>
-    <p>Contact us: info@springfieldchamber.com | (555) 123-4567</p>
-    <p>&copy; <span id="currentyear"></span> Springfield Chamber of Commerce | Kehinde Ojo | WDD 230</p>
-    <p><span id="lastModifiedMobile"></span></p>
- 
-  </footer>
-</body>
+              <legend>Applicant Information</legend>
+
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" required />
+
+              <label for="phone">Mobile Phone</label>
+              <input type="tel" id="phone" name="phone" required />
+            </fieldset>
+
+            <fieldset>
+              <legend>Applicant Business/Organization Information</legend>
+
+              <label for="businessName">Business/Organization Name</label>
+              <input type="text" id="businessName" name="businessName" required />
+
+              <label for="title">Title/Position</label>
+              <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" title="Only letters, hyphens, and spaces (min. 7 characters)" />
+
+              <label for="description">Business/Organization Description</label>
+              <textarea id="description" name="description"></textarea>
+            </fieldset>
+
+            <fieldset>
+              <label for="membershipLevel">Membership Level</label>
+              <select id="membershipLevel" name="membershipLevel">
+                <option value="">Please Select &#9662;</option>
+                <option value="NP">NP Membership (No Fee)</option>
+                <option value="Bronze">Bronze Membership</option>
+                <option value="Silver">Silver Membership</option>
+                <option value="Gold">Gold Membership</option>
+              </select>
+            </fieldset>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="" />
+
+            <button type="submit">Join Now</button>
+          </form>
+
+          <aside class="membership-benefits">
+            <h2>Membership Benefits</h2>
+            <ul>
+              <li>NP Membership: Community Support, Networking</li>
+              <li>Bronze: Event Discounts, Basic Advertising</li>
+              <li>Silver: Priority Event Access, Premium Advertising</li>
+              <li>Gold: All Benefits + Exclusive Events</li>
+            </ul>
+          </aside>
+        </fieldset>
+      </section>
+    </main>
+
+    <footer>
+      <p>Contact us: info@springfieldchamber.com | (555) 123-4567</p>
+      <p>&copy; <span id="currentyear"></span> Springfield Chamber of Commerce | Kehinde Ojo | WDD 230</p>
+      <p><span id="lastModifiedMobile"></span></p>
+    </footer>
+  </body>
 </html>
