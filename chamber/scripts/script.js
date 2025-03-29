@@ -85,12 +85,12 @@ window.onload = function() {
 };
 
 // Function to add the timestamp to the form action URL
-function addTimestampToUrl(event) {
-  event.preventDefault(); // Prevent the form from submitting immediately
-  var form = event.target;
-  var timestamp = document.getElementById('timestamp').value;
-  if (timestamp) {
-    form.action = "thankyou.html?timestamp=" + encodeURIComponent(timestamp); // Append timestamp to the URL
-  }
-  form.submit(); // Submit the form after modifying the action
-}
+// function addTimestampToUrl(event) {
+//   event.preventDefault(); // Prevent the form from submitting immediately
+//   var form = event.target;
+//   var timestamp = document.getElementById('timestamp').value;
+//   if (timestamp) {
+//     form.action = "thankyou.html?timestamp=" + encodeURIComponent(timestamp); // Append timestamp to the URL
+//   }
+//   form.submit(); // Submit the form after modifying the action
+// }
