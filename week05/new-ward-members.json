@@ -1,0 +1,34 @@
+{
+    "familyName": "Johnson",
+    "dateMovedIn": "2025-03-30",
+    "numberOfPeople": 5,
+    "visitedByBishopric": true,
+    "familyMembers": [
+      {
+        "name": "Michael Johnson",
+        "gender": "Male",
+        "birthdate": "1980-06-15"
+      },
+      {
+        "name": "Sarah Johnson",
+        "gender": "Female",
+        "birthdate": "1982-09-10"
+      },
+      {
+        "name": "Emily Johnson",
+        "gender": "Female",
+        "birthdate": "2010-04-22"
+      },
+      {
+        "name": "David Johnson",
+        "gender": "Male",
+        "birthdate": "2012-11-05"
+      },
+      {
+        "name": "Olivia Johnson",
+        "gender": "Female",
+        "birthdate": "2015-01-18"
+      }
+    ]
+  }
+  
