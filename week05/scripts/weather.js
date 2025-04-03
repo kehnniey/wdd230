@@ -4,8 +4,11 @@ const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 
 // const url = 'https://api.openweathermap.org/data/2.5/weather?lat=49.7&lon=6.6&units=imperial&appid=222b17f9d8766bddcdfc8914c5fe67c';
+
+const lat = 49.7759;
+const lon = 6.6797;
 const apiKey = 'd222b17f9d8766bddcdfc8914c5fe67c';
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=49.7&lon=6.6&units=imperial&appid=${apiKey}`;
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lat}&units=imperial&appid=${apiKey}`;
 
 
 async function apiFetch() {
