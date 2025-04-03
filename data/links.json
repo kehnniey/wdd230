@@ -3,23 +3,65 @@
     {
       "week": "Week 01",
       "links": [
-        {
-          "url": "week01/holygrail.html",
-          "title": "Layout"
-        },
-        {
-          "url": "week01/media-query.html",
-          "title": "Media Query"
-        }
+        { "title": "Layout", "url": "#" },
+        { "title": "Media Query", "url": "#" },
+        { "title": "JS Pen", "url": "#" }
       ]
     },
     {
       "week": "Week 02",
       "links": [
-        {
-          "url": "https://codepen.io/kehnniey/pen/NPWwbPe",
-          "title": "Responsive Menu"
-        }
+        { "title": "Responsive Menu", "url": "https://codepen.io/kehnniey/pen/NPWwbPe" }
+      ]
+    },
+    {
+      "week": "Week 03",
+      "links": [
+        { "title": "Webp Image Format", "url": "#" },
+        { "title": "Lazy Loading", "url": "#" }
+      ]
+    },
+    {
+      "week": "Week 04a",
+      "links": [
+        { "title": "CSS Pseudo-classes", "url": "https://codepen.io/kehnniey/pen/QwWBmBV" }
+      ]
+    },
+    {
+      "week": "Week 04b",
+      "links": [
+        { "title": "HTML Tables for Data Presentation", "url": "https://kehnniey.github.io/wdd230/week04/tablebuild" }
+      ]
+    },
+    {
+      "week": "Week 05a",
+      "links": [
+        { "title": "Pseudo-elements", "url": "https://codepen.io/kehnniey/pen/azbPwrR" }
+      ]
+    },
+    {
+      "week": "Week 05b",
+      "links": [
+        { "title": "The Fetch API - LDS Prophets", "url": "https://kehnniey.github.io/wdd230/week05/prophets" }
+      ]
+    },
+    {
+      "week": "Week 05c",
+      "links": [
+        { "title": "Consuming a 3rd-Party Weather API", "url": "https://kehnniey.github.io/wdd230/week05/weather" }
+      ]
+    },
+    {
+      "week": "Week 05",
+      "links": [
+        { "title": "Pseudo-elements", "url": "#" },
+        { "title": "Working with JSON data", "url": "#" }
+      ]
+    },
+    {
+      "week": "Week 06",
+      "links": [
+        { "title": "The Chamber Home Page Enhancements", "url": "#" }
       ]
     }
   ]

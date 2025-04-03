@@ -1,10 +1,14 @@
-const linksURL = "https://kehnniey.github.io/wdd230/data/links.json"; 
-const activitiesContainer = document.getElementById("activities");
+// const linksURL = "https://kehnniey.github.io/wdd230/data/links.json"; 
+// const activitiesContainer = document.getElementById("activities");
+
+document.addEventListener("DOMContentLoaded", getLinks);
 
 async function getLinks() {
+    const linksURL = "https://kehnniey.github.io/wdd230/data/links.json"; // Ensure this path matches your JSON file location
     try {
         const response = await fetch(linksURL);
-        if (!response.ok) throw new Error("Failed to fetch JSON");
+        if (!response.ok) throw new Error("Network response was not ok");
+        
         const data = await response.json();
         displayLinks(data.weeks);
     } catch (error) {
@@ -13,24 +17,25 @@ async function getLinks() {
 }
 
 function displayLinks(weeks) {
+    const activitiesElement = document.getElementById("activities");
+
+    if (!activitiesElement) {
+        console.error("Element with ID 'activities' not found");
+        return;
+    }
+
+    activitiesElement.innerHTML = "<h3>Learning Activities</h3>";
+
     weeks.forEach(week => {
-        const weekParagraph = document.createElement("p");
-        weekParagraph.textContent = `${week.week}: `;
+        let weekContent = `<p>${week.week}: `;
 
-        week.links.forEach((link, index) => {
-            const anchor = document.createElement("a");
-            anchor.href = link.url;
-            anchor.target = "_blank";
-            anchor.textContent = link.title;
+        weekContent += week.links.map(link => 
+            `<a href="${link.url}" target="_blank">${link.title}</a>`
+        ).join(" | ");
 
-            weekParagraph.appendChild(anchor);
-            if (index < week.links.length - 1) {
-                weekParagraph.appendChild(document.createTextNode(" | "));
-            }
-        });
-
-        activitiesContainer.appendChild(weekParagraph);
+        weekContent += "</p>";
+        activitiesElement.innerHTML += weekContent;
     });
-}
 
-getLinks();
+    console.log("Learning Activities Populated");
+}
