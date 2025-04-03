@@ -1,4 +1,4 @@
-const linksURL = "links.json"; // Corrected path
+const linksURL = "https://kehnniey.github.io/wdd230/data/links.json"; 
 const activitiesContainer = document.getElementById("activities");
 
 async function getLinks() {
