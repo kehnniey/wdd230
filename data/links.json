@@ -52,7 +52,7 @@
       ]
     },
     {
-      "week": "Week 05",
+      "week": "Week 05d",
       "links": [
         { "title": "Pseudo-elements", "url": "#" },
         { "title": "Working with JSON data", "url": "#" }
