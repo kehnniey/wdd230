@@ -94,3 +94,52 @@ window.onload = function() {
 //   }
 //   form.submit(); // Submit the form after modifying the action
 // }
+// Directory
+
+const directory = document.getElementById('directory');
+const gridButton = document.getElementById('gridView');
+const listButton = document.getElementById('listView');
+
+async function getMembers() {
+  const response = await fetch('data/members.json');
+  const data = await response.json();
+  displayMembers(data.members);
+}
+
+function displayMembers(members) {
+  directory.innerHTML = ''; // Clear before displaying
+
+  members.forEach(member => {
+    const card = document.createElement('section');
+    card.classList.add('member-card');
+
+    card.innerHTML = `
+      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+      <h3>${member.name}</h3>
+      <p>${member.address}</p>
+      <p>${member.phone}</p>
+      <a href="${member.website}" target="_blank">${member.website}</a>
+      <p class="level">${member.membership} Member</p>
+      <p>${member.description}</p>
+    `;
+
+    directory.appendChild(card);
+  });
+}
+
+// Toggle views
+gridButton.addEventListener('click', () => {
+  directory.classList.add('grid');
+  directory.classList.remove('list');
+  gridButton.classList.add('active');
+  listButton.classList.remove('active');
+});
+
+listButton.addEventListener('click', () => {
+  directory.classList.add('list');
+  directory.classList.remove('grid');
+  listButton.classList.add('active');
+  gridButton.classList.remove('active');
+});
+
+getMembers();

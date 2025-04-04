@@ -1,0 +1,68 @@
+{
+    "members": [
+      {
+        "name": "Sunrise Bakery",
+        "address": "123 Main St, Springfield, MA",
+        "phone": "555-123-4567",
+        "website": "https://sunrisebakery.com",
+        "image": "sunrise-bakery.webp",
+        "membership": "Gold",
+        "description": "Locally sourced pastries and bread since 1985."
+      },
+      {
+        "name": "TechFix Solutions",
+        "address": "200 Tech Park, Springfield, MA",
+        "phone": "555-987-6543",
+        "website": "https://techfix.com",
+        "image": "techfix.webp",
+        "membership": "Silver",
+        "description": "Computer and mobile repair experts."
+      },
+      {
+        "name": "Green Leaf Landscaping",
+        "address": "404 Garden Ave, Springfield, MA",
+        "phone": "555-777-1212",
+        "website": "https://greenleaflandscaping.com",
+        "image": "green-leaf.webp",
+        "membership": "Bronze",
+        "description": "Sustainable and beautiful landscaping solutions."
+      },
+      {
+        "name": "Springfield Gym & Fitness",
+        "address": "789 Muscle Blvd, Springfield, MA",
+        "phone": "555-555-7890",
+        "website": "https://springfieldgym.com",
+        "image": "gym.webp",
+        "membership": "Gold",
+        "description": "Empowering health and wellness in the community."
+      },
+      {
+        "name": "Book Nook",
+        "address": "66 Reading Lane, Springfield, MA",
+        "phone": "555-202-1234",
+        "website": "https://booknook.com",
+        "image": "book-nook.webp",
+        "membership": "Silver",
+        "description": "Independent bookstore with community events."
+      },
+      {
+        "name": "Bright Smiles Dentistry",
+        "address": "88 Dental Way, Springfield, MA",
+        "phone": "555-313-4444",
+        "website": "https://brightsmiles.com",
+        "image": "bright-smiles.webp",
+        "membership": "Gold",
+        "description": "Family dental care with a smile."
+      },
+      {
+        "name": "Crafty Creations",
+        "address": "55 Artisans Rd, Springfield, MA",
+        "phone": "555-999-9999",
+        "website": "https://craftycreations.com",
+        "image": "crafty-creations.webp",
+        "membership": "Bronze",
+        "description": "Handmade crafts and custom gifts."
+      }
+    ]
+  }
+  
