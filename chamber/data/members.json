@@ -5,7 +5,7 @@
         "address": "123 Main St, Springfield, MA",
         "phone": "555-123-4567",
         "website": "https://sunrisebakery.com",
-        "image": "https://kehnniey.github.io/wdd230/chamber/images/sunrise-bakery.webp",
+        "image": "sunrise-bakery.webp",
         "membership": "Gold",
         "description": "Locally sourced pastries and bread since 1985."
       },
@@ -14,7 +14,7 @@
         "address": "200 Tech Park, Springfield, MA",
         "phone": "555-987-6543",
         "website": "https://techfix.com",
-        "image": "https://kehnniey.github.io/wdd230/chamber/images/techfix.webp",
+        "image": "techfix.webp",
         "membership": "Silver",
         "description": "Computer and mobile repair experts."
       },
@@ -23,7 +23,7 @@
         "address": "404 Garden Ave, Springfield, MA",
         "phone": "555-777-1212",
         "website": "https://greenleaflandscaping.com",
-        "image": "https://kehnniey.github.io/wdd230/chamber/images/green-leaf.webp",
+        "image": "green-leaf.webp",
         "membership": "Bronze",
         "description": "Sustainable and beautiful landscaping solutions."
       },
@@ -32,7 +32,7 @@
         "address": "789 Muscle Blvd, Springfield, MA",
         "phone": "555-555-7890",
         "website": "https://springfieldgym.com",
-        "image": "https://kehnniey.github.io/wdd230/chamber/images/springfield-gym.webp",
+        "image": "springfield-gym.webp",
         "membership": "Gold",
         "description": "Empowering health and wellness in the community."
       },
@@ -41,7 +41,7 @@
         "address": "66 Reading Lane, Springfield, MA",
         "phone": "555-202-1234",
         "website": "https://booknook.com",
-        "image": "https://kehnniey.github.io/wdd230/chamber/images/book-nook.webp",
+        "image": "book-nook.webp",
         "membership": "Silver",
         "description": "Independent bookstore with community events."
       },
@@ -50,7 +50,7 @@
         "address": "88 Dental Way, Springfield, MA",
         "phone": "555-313-4444",
         "website": "https://brightsmiles.com",
-        "image": "https://kehnniey.github.io/wdd230/chamber/images/bright-smiles.webp",
+        "image": "bright-smiles.webp",
         "membership": "Gold",
         "description": "Family dental care with a smile."
       },
@@ -59,7 +59,7 @@
         "address": "55 Artisans Rd, Springfield, MA",
         "phone": "555-999-9999",
         "website": "https://craftycreations.com",
-        "image": "https://kehnniey.github.io/wdd230/chamber/images/crafty-creations.webp",
+        "image": "crafty-creations.webp",
         "membership": "Bronze",
         "description": "Handmade crafts and custom gifts."
       },
@@ -68,7 +68,7 @@
         "address": "12 Brewster Blvd, Springfield, MA",
         "phone": "555-876-5432",
         "website": "https://urbanbeancafe.com",
-        "image": "https://kehnniey.github.io/wdd230/chamber/images/urban-bean.webp",
+        "image": "urban-bean.webp",
         "membership": "Silver",
         "description": "Cozy spot for artisan coffee and community vibes."
       }

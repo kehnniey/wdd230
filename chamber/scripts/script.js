@@ -182,7 +182,7 @@ function displayMembers(members) {
     card.classList.add('card');
 
     const img = document.createElement('img');
-    img.src = `images/${member.image}`;
+    img.src = `https://kehnniey.github.io/wdd230/chamber/images/${member.image}`; // Full image URL
     img.alt = `${member.name} logo`;
     img.loading = 'lazy';
 
