@@ -3,15 +3,16 @@
     {
       "week": "Week 01",
       "links": [
-        { "title": "Layout", "url": "#" },
-        { "title": "Media Query", "url": "#" },
-        { "title": "JS Pen", "url": "#" }
+        { "title": "Layout" },
+        { "title": "Media Query" },
+        { "title": "JS Pen"}
       ]
     },
     {
       "week": "Week 02",
       "links": [
-        { "title": "Responsive Menu", "url": "https://codepen.io/kehnniey/pen/NPWwbPe" }
+        {"title": "Responsive Menu"},
+        {"title": "Codepen Example", "url": "https://codepen.io/kehnniey/pen/NPWwbPe"}
       ]
     },
     {
@@ -42,26 +43,20 @@
     {
       "week": "Week 05b",
       "links": [
-        { "title": "The Fetch API - LDS Prophets", "url": "https://kehnniey.github.io/wdd230/week05/prophets" }
+        { "title": "Working with JSON data - LDS Prophets", "url": "https://kehnniey.github.io/wdd230/week05/prophets" }
       ]
     },
     {
       "week": "Week 05c",
       "links": [
-        { "title": "Consuming a 3rd-Party Weather API", "url": "https://kehnniey.github.io/wdd230/week05/weather" }
+        { "title": "The Fetch API - Consuming a 3rd-Party Weather API", "url": "https://kehnniey.github.io/wdd230/week05/weather" }
       ]
     },
-    {
-      "week": "Week 05d",
-      "links": [
-        { "title": "Pseudo-elements", "url": "#" },
-        { "title": "Working with JSON data", "url": "#" }
-      ]
-    },
+ 
     {
       "week": "Week 06",
       "links": [
-        { "title": "The Chamber Home Page Enhancements", "url": "#" }
+        { "title": "The Chamber Home Page Enhancements", "url": "'https://kehnniey.github.io/wdd230/chamber" }
       ]
     }
   ]

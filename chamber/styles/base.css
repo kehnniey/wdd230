@@ -55,6 +55,7 @@ main {
   position: relative;
   overflow: hidden;
   max-height: 450px;
+  
 }
 
 .hero img {
@@ -114,6 +115,7 @@ main {
   background: var(--primary-color);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(23, 154, 101, 0.1);
+  color:yellow; 
 }
 .event-weather-container {
   display: flex;
