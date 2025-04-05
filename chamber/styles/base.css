@@ -543,7 +543,7 @@ main h2 {
 }
 
 .card a {
-  color: #E67E22;
+  color: #2239e6;
   text-decoration: none;
   font-weight: bold;
   margin: 0.5rem 0;
@@ -577,12 +577,12 @@ main h2 {
 
 .card .silver {
   background-color: #C0C0C0; /* silver */
-  color: #2C3E50;
+  color:#221a1a;
 }
 
 .card .bronze {
   background-color: #CD7F32; /* bronze */
-  color: #fff;
+  color: #221a1a;
 }
 
 #members.list .card {
