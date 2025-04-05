@@ -97,68 +97,154 @@ window.onload = function() {
 // Directory
 
 // 
-const url = 'https://kehnniey.github.io/wdd230/chamber/data/members.json';
-const membersContainer = document.querySelector('#members');
-const gridBtn = document.querySelector('#grid');
-const listBtn = document.querySelector('#list');
+// const url = 'https://kehnniey.github.io/wdd230/chamber/data/members.json';
+// const membersContainer = document.querySelector('#members');
+// const gridBtn = document.querySelector('#grid');
+// const listBtn = document.querySelector('#list');
+
+// // Fetch and display members
+// async function getMembers() {
+//   const response = await fetch(url);
+//   const data = await response.json();
+//   displayMembers(data.members);
+// }
+
+// function displayMembers(members) {
+//   members.forEach((member) => {
+//     let card = document.createElement('section');
+//     card.classList.add('card');
+
+//     let img = document.createElement('img');
+//     img.setAttribute('src', `images/${member.image}`);
+//     img.setAttribute('alt', `${member.name} logo`);
+//     img.setAttribute('loading', 'lazy');
+//     img.setAttribute('width', '150');
+//     img.setAttribute('height', '150');
+
+//     let name = document.createElement('h3');
+//     name.textContent = member.name;
+
+//     let address = document.createElement('p');
+//     address.textContent = member.address;
+
+//     let phone = document.createElement('p');
+//     phone.textContent = member.phone;
+
+//     let website = document.createElement('a');
+//     website.setAttribute('href', member.website);
+//     website.setAttribute('target', '_blank');
+//     website.textContent = "Visit Website";
+
+//     let level = document.createElement('p');
+//     level.classList.add('membership');
+//     level.textContent = `${member.membership} Member`;
+
+//     card.appendChild(img);
+//     card.appendChild(name);
+//     card.appendChild(address);
+//     card.appendChild(phone);
+//     card.appendChild(website);
+//     card.appendChild(level);
+
+//     membersContainer.appendChild(card);
+//   });
+// }
+
+// // View toggle
+// gridBtn.addEventListener('click', () => {
+//   membersContainer.classList.add('grid');
+//   membersContainer.classList.remove('list');
+// });
+
+// listBtn.addEventListener('click', () => {
+//   membersContainer.classList.add('list');
+//   membersContainer.classList.remove('grid');
+// });
+
+// getMembers();
+
+const membersContainer = document.getElementById('members');
+const gridButton = document.getElementById('grid');
+const listButton = document.getElementById('list');
 
 // Fetch and display members
 async function getMembers() {
-  const response = await fetch(url);
+  const response = await fetch('https://kehnniey.github.io/wdd230/chamber/data/members.json');
   const data = await response.json();
   displayMembers(data.members);
 }
 
 function displayMembers(members) {
-  members.forEach((member) => {
-    let card = document.createElement('section');
+  membersContainer.innerHTML = '';
+
+  members.forEach(member => {
+    const card = document.createElement('section');
     card.classList.add('card');
 
-    let img = document.createElement('img');
-    img.setAttribute('src', `images/${member.image}`);
-    img.setAttribute('alt', `${member.name} logo`);
-    img.setAttribute('loading', 'lazy');
-    img.setAttribute('width', '150');
-    img.setAttribute('height', '150');
+    const img = document.createElement('img');
+    img.src = `images/${member.image}`;
+    img.alt = `${member.name} logo`;
+    img.loading = 'lazy';
 
-    let name = document.createElement('h3');
+    const name = document.createElement('h3');
     name.textContent = member.name;
 
-    let address = document.createElement('p');
+    const address = document.createElement('p');
     address.textContent = member.address;
 
-    let phone = document.createElement('p');
+    const phone = document.createElement('p');
     phone.textContent = member.phone;
 
-    let website = document.createElement('a');
-    website.setAttribute('href', member.website);
-    website.setAttribute('target', '_blank');
-    website.textContent = "Visit Website";
+    const description = document.createElement('p');
+    description.textContent = member.description;
 
-    let level = document.createElement('p');
-    level.classList.add('membership');
-    level.textContent = `${member.membership} Member`;
+    const website = document.createElement('a');
+    website.href = member.website;
+    website.textContent = 'Visit Website';
+    website.target = '_blank';
 
+    const membershipSpan = document.createElement('span');
+    membershipSpan.classList.add('membership');
+
+    // Assign class and emoji based on membership
+    switch (member.membership) {
+      case 'Gold':
+        membershipSpan.textContent = '🌟 Gold Member';
+        membershipSpan.classList.add('gold');
+        break;
+      case 'Silver':
+        membershipSpan.textContent = '🥈 Silver Member';
+        membershipSpan.classList.add('silver');
+        break;
+      case 'Bronze':
+        membershipSpan.textContent = '🥉 Bronze Member';
+        membershipSpan.classList.add('bronze');
+        break;
+    }
+
+    // Append all elements to the card
     card.appendChild(img);
     card.appendChild(name);
     card.appendChild(address);
     card.appendChild(phone);
+    card.appendChild(membershipSpan);
+    card.appendChild(description);
     card.appendChild(website);
-    card.appendChild(level);
 
     membersContainer.appendChild(card);
   });
 }
 
-// View toggle
-gridBtn.addEventListener('click', () => {
+// Toggle view buttons
+gridButton.addEventListener('click', () => {
   membersContainer.classList.add('grid');
   membersContainer.classList.remove('list');
 });
 
-listBtn.addEventListener('click', () => {
+listButton.addEventListener('click', () => {
   membersContainer.classList.add('list');
   membersContainer.classList.remove('grid');
 });
 
+// Run the fetch function
 getMembers();
