@@ -62,6 +62,15 @@
         "image": "crafty-creations.webp",
         "membership": "Bronze",
         "description": "Handmade crafts and custom gifts."
+      },
+      {
+        "name": "Urban Bean Cafe",
+        "address": "12 Brewster Blvd, Springfield, MA",
+        "phone": "555-876-5432",
+        "website": "https://urbanbeancafe.com",
+        "image": "urban-bean.webp",
+        "membership": "Silver",
+        "description": "Cozy spot for artisan coffee and community vibes."
       }
     ]
   }
