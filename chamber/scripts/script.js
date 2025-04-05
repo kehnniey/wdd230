@@ -96,50 +96,69 @@ window.onload = function() {
 // }
 // Directory
 
-const directory = document.getElementById('directory');
-const gridButton = document.getElementById('gridView');
-const listButton = document.getElementById('listView');
+// 
+const url = 'https://kehnniey.github.io/wdd230/chamber/data/members.json';
+const membersContainer = document.querySelector('#members');
+const gridBtn = document.querySelector('#grid');
+const listBtn = document.querySelector('#list');
 
+// Fetch and display members
 async function getMembers() {
-  const response = await fetch('data/members.json');
+  const response = await fetch(url);
   const data = await response.json();
   displayMembers(data.members);
 }
 
 function displayMembers(members) {
-  directory.innerHTML = ''; // Clear before displaying
+  members.forEach((member) => {
+    let card = document.createElement('section');
+    card.classList.add('card');
 
-  members.forEach(member => {
-    const card = document.createElement('section');
-    card.classList.add('member-card');
+    let img = document.createElement('img');
+    img.setAttribute('src', `images/${member.image}`);
+    img.setAttribute('alt', `${member.name} logo`);
+    img.setAttribute('loading', 'lazy');
+    img.setAttribute('width', '150');
+    img.setAttribute('height', '150');
 
-    card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
-      <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">${member.website}</a>
-      <p class="level">${member.membership} Member</p>
-      <p>${member.description}</p>
-    `;
+    let name = document.createElement('h3');
+    name.textContent = member.name;
 
-    directory.appendChild(card);
+    let address = document.createElement('p');
+    address.textContent = member.address;
+
+    let phone = document.createElement('p');
+    phone.textContent = member.phone;
+
+    let website = document.createElement('a');
+    website.setAttribute('href', member.website);
+    website.setAttribute('target', '_blank');
+    website.textContent = "Visit Website";
+
+    let level = document.createElement('p');
+    level.classList.add('membership');
+    level.textContent = `${member.membership} Member`;
+
+    card.appendChild(img);
+    card.appendChild(name);
+    card.appendChild(address);
+    card.appendChild(phone);
+    card.appendChild(website);
+    card.appendChild(level);
+
+    membersContainer.appendChild(card);
   });
 }
 
-// Toggle views
-gridButton.addEventListener('click', () => {
-  directory.classList.add('grid');
-  directory.classList.remove('list');
-  gridButton.classList.add('active');
-  listButton.classList.remove('active');
+// View toggle
+gridBtn.addEventListener('click', () => {
+  membersContainer.classList.add('grid');
+  membersContainer.classList.remove('list');
 });
 
-listButton.addEventListener('click', () => {
-  directory.classList.add('list');
-  directory.classList.remove('grid');
-  listButton.classList.add('active');
-  gridButton.classList.remove('active');
+listBtn.addEventListener('click', () => {
+  membersContainer.classList.add('list');
+  membersContainer.classList.remove('grid');
 });
 
 getMembers();
