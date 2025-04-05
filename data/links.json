@@ -12,51 +12,58 @@
       "week": "Week 02",
       "links": [
         {"title": "Responsive Menu"},
-        {"title": "Codepen Example", "url": "https://codepen.io/kehnniey/pen/NPWwbPe"}
+        {"title": "Learning Activity", "url": "https://codepen.io/kehnniey/pen/NPWwbPe"}
       ]
     },
     {
       "week": "Week 03",
       "links": [
-        { "title": "Webp Image Format", "url": "#" },
+        { "title": "Webp Image Format"},
         { "title": "Lazy Loading", "url": "#" }
       ]
     },
     {
       "week": "Week 04a",
       "links": [
-        { "title": "CSS Pseudo-classes", "url": "https://codepen.io/kehnniey/pen/QwWBmBV" }
+        { "title": "CSS Pseudo-classes"},
+        {"title": "Learning Activity", "url": "https://codepen.io/kehnniey/pen/QwWBmBV"}
       ]
     },
     {
       "week": "Week 04b",
       "links": [
-        { "title": "HTML Tables for Data Presentation", "url": "https://kehnniey.github.io/wdd230/week04/tablebuild" }
+        { "title": "HTML Tables for Data Presentation"},
+        {"title": "Learning Activity", "url": "https://kehnniey.github.io/wdd230/week04/tablebuild"}
+        
       ]
     },
     {
       "week": "Week 05a",
       "links": [
-        { "title": "Pseudo-elements", "url": "https://codepen.io/kehnniey/pen/azbPwrR" }
+        { "title": "Pseudo-elements"},
+        {"title": "Learning Activity", "url": "https://codepen.io/kehnniey/pen/azbPwrR"}
       ]
     },
     {
       "week": "Week 05b",
       "links": [
-        { "title": "Working with JSON data - LDS Prophets", "url": "https://kehnniey.github.io/wdd230/week05/prophets" }
+        { "title": "Working with JSON data - LDS Prophets"},
+        {"title": "Learning Activity", "url": "https://kehnniey.github.io/wdd230/week05/prophets"}
       ]
     },
     {
       "week": "Week 05c",
       "links": [
-        { "title": "The Fetch API - Consuming a 3rd-Party Weather API", "url": "https://kehnniey.github.io/wdd230/week05/weather" }
+        { "title": "The Fetch API - Consuming a 3rd-Party Weather API"},
+        {"title": "Learning Activity", "url": "https://kehnniey.github.io/wdd230/week05/weather"}
       ]
     },
  
     {
       "week": "Week 06",
       "links": [
-        { "title": "The Chamber Home Page Enhancements", "url": "'https://kehnniey.github.io/wdd230/chamber" }
+        { "title": "The Chamber Home Page Enhancements"},
+        {"title": "Learning Activity", "url": "https://kehnniey.github.io/wdd230/chamber"}
       ]
     }
   ]
