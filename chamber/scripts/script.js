@@ -84,159 +84,13 @@ window.onload = function() {
   }
 };
 
-// Function to add the timestamp to the form action URL
-// function addTimestampToUrl(event) {
-//   event.preventDefault(); // Prevent the form from submitting immediately
-//   var form = event.target;
-//   var timestamp = document.getElementById('timestamp').value;
-//   if (timestamp) {
-//     form.action = "thankyou.html?timestamp=" + encodeURIComponent(timestamp); // Append timestamp to the URL
-//   }
-//   form.submit(); // Submit the form after modifying the action
-// }
-// Directory
 
-// 
-// const url = 'https://kehnniey.github.io/wdd230/chamber/data/members.json';
-// const membersContainer = document.querySelector('#members');
-// const gridBtn = document.querySelector('#grid');
-// const listBtn = document.querySelector('#list');
 
-// // Fetch and display members
-// async function getMembers() {
-//   const response = await fetch(url);
-//   const data = await response.json();
-//   displayMembers(data.members);
-// }
-
-// function displayMembers(members) {
-//   members.forEach((member) => {
-//     let card = document.createElement('section');
-//     card.classList.add('card');
-
-//     let img = document.createElement('img');
-//     img.setAttribute('src', `images/${member.image}`);
-//     img.setAttribute('alt', `${member.name} logo`);
-//     img.setAttribute('loading', 'lazy');
-//     img.setAttribute('width', '150');
-//     img.setAttribute('height', '150');
-
-//     let name = document.createElement('h3');
-//     name.textContent = member.name;
-
-//     let address = document.createElement('p');
-//     address.textContent = member.address;
-
-//     let phone = document.createElement('p');
-//     phone.textContent = member.phone;
-
-//     let website = document.createElement('a');
-//     website.setAttribute('href', member.website);
-//     website.setAttribute('target', '_blank');
-//     website.textContent = "Visit Website";
-
-//     let level = document.createElement('p');
-//     level.classList.add('membership');
-//     level.textContent = `${member.membership} Member`;
-
-//     card.appendChild(img);
-//     card.appendChild(name);
-//     card.appendChild(address);
-//     card.appendChild(phone);
-//     card.appendChild(website);
-//     card.appendChild(level);
-
-//     membersContainer.appendChild(card);
-//   });
-// }
-
-// // View toggle
-// gridBtn.addEventListener('click', () => {
-//   membersContainer.classList.add('grid');
-//   membersContainer.classList.remove('list');
-// });
-
-// listBtn.addEventListener('click', () => {
-//   membersContainer.classList.add('list');
-//   membersContainer.classList.remove('grid');
-// });
-
-// getMembers();
-
+// Grid./List
 const membersContainer = document.getElementById('members');
 const gridButton = document.getElementById('grid');
 const listButton = document.getElementById('list');
 
-// Fetch and display members
-async function getMembers() {
-  const response = await fetch('https://kehnniey.github.io/wdd230/chamber/data/members.json');
-  const data = await response.json();
-  displayMembers(data.members);
-}
-
-function displayMembers(members) {
-  membersContainer.innerHTML = '';
-
-  members.forEach(member => {
-    const card = document.createElement('section');
-    card.classList.add('card');
-
-    const img = document.createElement('img');
-    img.src = `https://kehnniey.github.io/wdd230/chamber/images/${member.image}`; 
-    // img.src = `chamber/images/${member.image}`; 
-    img.alt = `${member.name} logo`;
-    img.loading = 'lazy';
-
-    const name = document.createElement('h3');
-    name.textContent = member.name;
-
-    const address = document.createElement('p');
-    address.textContent = member.address;
-
-    const phone = document.createElement('p');
-    phone.textContent = member.phone;
-
-    const description = document.createElement('p');
-    description.textContent = member.description;
-
-    const website = document.createElement('a');
-    website.href = member.website;
-    website.textContent = 'Visit Website';
-    website.target = '_blank';
-
-    const membershipSpan = document.createElement('span');
-    membershipSpan.classList.add('membership');
-
-    // Assign class and emoji based on membership
-    switch (member.membership) {
-      case 'Gold':
-        membershipSpan.textContent = '🌟 Gold Member';
-        membershipSpan.classList.add('gold');
-        break;
-      case 'Silver':
-        membershipSpan.textContent = '🥈 Silver Member';
-        membershipSpan.classList.add('silver');
-        break;
-      case 'Bronze':
-        membershipSpan.textContent = '🥉 Bronze Member';
-        membershipSpan.classList.add('bronze');
-        break;
-    }
-
-    // Append all elements to the card
-    card.appendChild(img);
-    card.appendChild(name);
-    card.appendChild(address);
-    card.appendChild(phone);
-    card.appendChild(membershipSpan);
-    card.appendChild(description);
-    card.appendChild(website);
-
-    membersContainer.appendChild(card);
-  });
-}
-
-// Toggle view buttons
 gridButton.addEventListener('click', () => {
   membersContainer.classList.add('grid');
   membersContainer.classList.remove('list');
@@ -247,5 +101,48 @@ listButton.addEventListener('click', () => {
   membersContainer.classList.remove('grid');
 });
 
-// Run the fetch function
+async function getMembers() {
+  try {
+    const response = await fetch('https://kehnniey.github.io/wdd230/chamber/data/members.json');
+    const { members } = await response.json();
+    displayMembers(members);
+  } catch (error) {
+    console.error('Failed to fetch members:', error);
+    membersContainer.innerHTML = `<p class="error">Unable to load member directory.</p>`;
+  }
+}
+
+function displayMembers(members) {
+  membersContainer.innerHTML = '';
+
+  members.forEach(({ name, address, phone, website, image, membership, description }) => {
+    const card = document.createElement('section');
+    card.classList.add('card');
+
+    card.innerHTML = `
+      <img src="https://kehnniey.github.io/wdd230/chamber/images/${image}" alt="${name} logo" loading="lazy" />
+      <h3>${name}</h3>
+      <p>${address}</p>
+      <p>${phone}</p>
+      <span class="membership ${membership.toLowerCase()}">
+        ${getMembershipBadge(membership)}
+      </span>
+      <p>${description}</p>
+      <a href="${website}" target="_blank" rel="noopener">Visit Website</a>
+    `;
+
+    membersContainer.appendChild(card);
+  });
+}
+
+function getMembershipBadge(level) {
+  const badges = {
+    Gold: '🌟 Gold Member',
+    Silver: '🥈 Silver Member',
+    Bronze: '🥉 Bronze Member',
+  };
+  return badges[level] || '';
+}
+
 getMembers();
+
