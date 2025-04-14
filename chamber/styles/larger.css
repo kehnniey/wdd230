@@ -10,11 +10,11 @@
         text-align: center;
       }
     
-      h2 {
+      /* h2 {
         color: #121213;
         font-size: 2rem;
         text-align: center;
-      }
+      } */
     
       #menu {
         display: none; /* Hide hamburger button on large screens */
@@ -95,12 +95,13 @@ header {
     border-radius: 10px;
   }
   
-  .hero-text {
+  .hero-text,h2 {
     position: static;
     transform: none;
     text-align: left;
     color: var(--primary-color);
     text-shadow: none;
+    text-align: center;
   }
   
   /* CTA Button centered with padding */
