@@ -10,19 +10,15 @@
         text-align: center;
       }
     
-      /* h2 {
-        color: #121213;
-        font-size: 2rem;
-        text-align: center;
-      } */
+ 
     
       #menu {
-        display: none; /* Hide hamburger button on large screens */
+        display: none;
       
       }
     
       .navigation {
-        flex-direction: row; /* Horizontal navigation links on larger screens */
+        flex-direction: row; 
     
       }
     
@@ -164,23 +160,14 @@ header {
     grid-column: auto;
     grid-row: auto;
   }
-
-  
+  .form-benefits-wrapper {
+    flex-direction: row;
+    align-items: stretch;
   }
   
-
-@media screen and (max-width: 600px) {
-  .form-container {
-    margin: 0;              
-    border-radius: 0;      
-    padding: 1rem;          
   }
+  
 
-  .form-section {
-    padding: 1rem;
-  }
 
-  fieldset {
-    padding: 0.2rem  0.1rem
-  }
-}
+
+

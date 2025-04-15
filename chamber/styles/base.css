@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
 
 :root {
   --primary-color: #2C3E50;
@@ -377,20 +377,14 @@ ul li {
 
 /* Join & Thank You Pages */
 
-.form-container {
-  background-color: var(--primary-color);
-  padding: 2rem;
-  max-width: 700px;
-  margin: 2rem auto; /* Center the form */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+.form-benefits-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.form-section {
-  background-color: var(--primary-color);
-  padding: 2rem;
-  border-radius: 10px;
-}
+
 
 input,
 select,
@@ -416,104 +410,168 @@ input[type="submit"]:hover {
   background-color: #E67E22;
 }
 
-fieldset {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 8px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 2rem;
+/* Form section */
+.form-section {
+  flex: 1;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
-legend {
-  padding: 0 1rem;
-  font-weight: bold;
-  font-size: 1.1rem;
+.form-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #ecf0f1;
+  text-align: center;
 }
+
 
 .wf1 fieldset {
-  padding: 1rem;
+  border: none;
   margin-bottom: 1.5rem;
 }
 
 .wf1 legend {
-  padding: 0 0.75rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .wf1 label {
   display: block;
-  padding-top: 1rem;
-  font-size: 0.95rem;
-  color: #fff;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
 }
 
-/* Base Styles */
-.form-container {
-  background-color: var(--primary-color);
-  padding: 2rem;
-  max-width: 700px;
-  margin: 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.wf1 input,
+.wf1 select,
+.wf1 textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
 }
 
-/
-/* Membership Benefits Section Styling */
-.membership-benefits {
-  background-color: var(--primary-color);
-  padding: 2rem;
-  border-radius: 10px;
+.wf1 textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.wf1 button {
+  margin-top: 1rem;
+  width: 100% 40%;
+  padding: 0.75rem 1.25rem;
+  background-color: #10179f;
   color: white;
-  max-width: 600px;
-  margin: 2rem auto;
+  border: large;
+  border-radius: 6px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.membership-benefits h2 {
+.wf1 button:hover {
+  background-color: #2980b9;
+}
+
+
+
+/* Membership Benefits Section Styling */
+
+
+.membership-benefits {
   font-family: var(--font-heading);
   font-size: 2rem;
   color: var(--secondary-color);
   margin-bottom: 1rem;
   text-align: center;
+  flex: 1;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
-.membership-benefits ul {
-  list-style: none;
-  padding-left: 0;
-}
 
-.membership-benefits li {
-  font-size: 1.1rem;
-  margin: 1rem 0;
-  background-color: #743d3d;
+.membership-benefits {
+  flex: 1;
   padding: 1rem;
-  border-radius: 5px;
-  color: var(--secondary-color);
-  transition: background-color 0.3s ease;
 }
+
+.membership-benefits h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.benefit-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.benefit-header {
+  padding: 1rem;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.benefit-body {
+  padding: 1rem;
+  color: #333;
+}
+
+.benefit-body p {
+  margin: 0.5rem 0;
+}
+
+.benefit-body ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.benefit-body li {
+  margin-bottom: 0.4rem;
+  list-style: disc;
+}
+
+
+
+/* Card Header Colors */
+.np .benefit-header {
+  background-color: #2e8b57;
+}
+
+.bronze .benefit-header {
+  background-color: #cd7f32;
+}
+
+.silver .benefit-header {
+  background-color: #878282;
+  /* color: #000; */
+}
+
+.gold .benefit-header {
+  background-color: #ffd700;
+  color: #000000;
+}
+
 
 .membership-benefits li:hover {
   background-color: #E67E22;
   color: white;
 }
 
-.membership-benefits li:first-child {
-  background-color: #262727; 
-}
-
-/* Reduced Form Size */
-.form-container,
-.form-section {
-  background-color: var(--primary-color);
-  padding: 1rem 1rem; 
-  border-radius: 10px;
-  color: white;
-  max-width: 60%;
-  /* Reduced width */
-  margin: 2rem auto;
-}
 
 
-/* Specific Styling for Thank You Page */
+
+
+/*  Thank You Page */
 
 
 .thank-you-page {
@@ -521,8 +579,8 @@ legend {
   color: var(--primary-color);
   padding: 2rem;
   text-align: center;
-  max-width: 600px; /* Limiting width for better readability */
-  margin: 3rem auto; /* Centering the content */
+  max-width: 600px; 
+  margin: 3rem auto; 
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -557,15 +615,7 @@ legend {
 }
 
 
-/* Directory */
 
-
-/* Body base font and background */
-/* body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #F4F4F4;
-  color: #2C3E50;
-} */
 
 main h2 {
   font-family: 'Roboto', sans-serif;
@@ -754,7 +804,7 @@ main h2 {
 }
 
 
-/* Meet greet banner */
+ /* Meet & geet banner  */
 .meet-greet-banner {
   background-color:  #f9f5e3;  
   color:  #333;  
@@ -785,3 +835,5 @@ main h2 {
 body {
   margin-top:  60px; 
 }
+
+
