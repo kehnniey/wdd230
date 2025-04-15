@@ -1,5 +1,4 @@
-// document.getElementById("year").textContent = new Date().getFullYear();
-// document.getElementById("lastModified").textContent = document.lastModified;
+
 
 // Set the last modified date dynamically in the footer
 const currentYearElements = document.querySelectorAll("#currentyear, .currentyear");

@@ -8,12 +8,16 @@
         <meta name="author" content="Kehinde Ojo" />
       
         <!-- Social Media Meta Tags -->
-        <meta property="og:title" content="Springfield Chamber of Commerce" />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website">
-        <meta property="og:image" content="https://example.com/images/social-preview.jpg" />
-        <meta property="og:url" content="https://example.com/" />
+        <meta property="og:title" content="Springfield Chamber of Commerce | Grow Your Business Locally"/>
         <meta property="og:description" content="Springfield Chamber of Commerce supports local economic development, business networking, and community engagement." />
-       
+        <meta property="og:url" content="https://kehnniey.github.io/wdd230/chamber/discover.html" />
+        <meta property="og:image" content="https://kehnniey.github.io/wdd230/chamber/images/springfield-arial-view.webp" />
+        <meta property="og:image:alt" content="An arial image of Springfield MA" />
+        <meta property="og:image:type" content="image/webp" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="320" />
             
         <!-- Favicon -->
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -43,7 +47,7 @@
             <li><a href="discover.html">Discover</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="contact.html">Contact</a></li>
+           
           </ul>
         </nav>
       </header>
@@ -51,19 +55,24 @@
       <main class="discover-layout">
         <aside class="sidebar">
           <div id="visitMessage"></div>
-          <h2>Springfield Highlights</h2>
-          <ul>
-            <li>Population: 156,201</li>
-            <li>Median Age: 35</li>
-            <li>Median Household Income: $53,348</li>
-            <li>Median Monthly Rent: $1,135</li>
-            <li>Unemployment Rate: 8.65%</li>
-            <li>Attraction: Naismith Memorial Basketball Hall of Fame</li>
-            <li>Top Attraction: Dr. Seuss National Memorial Sculpture Garden</li>
-          </ul>
+          <div class="highlights-container">
+            <h3 class="highlights-title">Springfield Highlights</h3>
+            <div class="highlights-grid">
+              <div><strong>Population:</strong> 156,201</div>
+              <div><strong>Median Age:</strong> 35</div>
+              <div><strong>Median Income:</strong> $53,348</div>
+              <div><strong>Monthly Rent:</strong> $1,135</div>
+              <div><strong>Unemployment Rate:</strong> 8.65%</div>
+              <div><strong>Attraction:</strong> Naismith Basketball Hall of Fame</div>
+              <div class="full-width"><strong>Top Attraction:</strong> Dr. Seuss Sculpture Garden</div>
+            </div>
+          </div>
+          
+          </div>
+          
         </aside>
       
-        <section class="photo-gallery">
+        <section class="photo-gallery" aria-label="Springfield landmarks photo gallery">
           <!-- Left column -->
           <figure>
             <img src="images/nsmith-hall-of-fame.webp" alt="Naismith Basketball Hall of Fame" loading="lazy" />

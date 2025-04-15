@@ -17,8 +17,9 @@
 body {
   font-family: var(--font-body);
   background-color: var(--accent-color);
-  color: yellow;  
+  color: #332c50;
   line-height: 1.6;
+  margin-top: 60px;
 }
 
 /* Header and Footer */
@@ -29,17 +30,19 @@ footer {
   text-align: center;
   padding: 1rem;
 }
- h2 {
-  
-  color:  rgb(19, 19, 19);
-  font-size: 20px;
- 
-}
+
 
 h1, h3, h4 {
   font-family: var(--font-heading);
   color: var(--secondary-color);
   margin-bottom: 0.5rem;
+}
+
+h2 {
+  
+  color: #131313;
+  font-size: 20px;
+ 
 }
 
 a {
@@ -48,39 +51,48 @@ a {
   
 }
 
+a:hover {
+  background-color: #E67E22;
+  color: #fff;
+}
+
 main {
   padding: 1rem;
 }
 
+
 /* Hero Section */
 .hero {
   position: relative;
+  max-width: 100%;
   overflow: hidden;
-  max-height: 450px;
-  
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 1rem;
   object-fit: cover;
-  max-height: 450px;
-  filter: brightness(70%);
 }
 
-/* Text over image */
+
 .hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  background: rgba(0, 0, 0, 0.6); 
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
   text-align: center;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  max-width: 80%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 .hero-text h2 {
   font-size: 2rem;
@@ -90,7 +102,11 @@ main {
 
 .hero-text p {
   font-size: 1.2rem;
+  color: var(--accent-color);
 }
+
+
+
 
 /* Call to Action */
 .cta {
@@ -111,18 +127,7 @@ main {
   margin-top: 1rem;
 }
 
-/* Section Styling */
-.events, .weather, .spotlights {
-  margin: 2rem 0;
-  padding: 1rem;
-  background: var(--primary-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(23, 154, 101, 0.1);
-  color: #ecf0f1;
-}
-.events {
-  margin: auto;
-max-width: 800px;}
+/* Events & Weather */
 
 .event-weather-container {
   display: flex;
@@ -132,18 +137,60 @@ max-width: 800px;}
 }
 
 
-.events, .weather {
+
+.events, .weather, .spotlights {
   flex: 1 1 45%;
+  margin: 2rem 0;
+  padding: 2rem ;
+  background: var(--primary-color);
+  color: #ecf0f1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  
+
 }
+
 
 .events ul {
-padding-left: 1.5rem; 
-margin-bottom:  1em;  
-/* font-size:  1.1rem;   */
-line-height:  1.6;  
-list-style-type:  none; 
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0;
 }
 
+
+.events ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+.events ul li strong {
+  font-weight: 600;
+}
+
+/* Weather Section Styling */
+.weather .weather-card,
+.weather .forecast-container {
+  background-color: #2e4256;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.weather p.loading {
+  color: #ccc;
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+/* Forecast Layout */
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Spotlight Grid & Cards */
 .spotlight-grid {
   display: grid;
   gap: 1rem;
@@ -154,10 +201,14 @@ list-style-type:  none;
   background-color: #143097;
   border-left: 5px solid var(--secondary-color);
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 10px; 
+  color: #ecf0f1; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Hamburger Navigation */
+
+/* Hamburger Menu */
+
 #menu {
   font-size: 2rem;
   background: none;
@@ -167,11 +218,11 @@ list-style-type:  none;
 }
 
 #menu::before {
-  content: "☰"; /* Hamburger icon */
+  content: "☰"; 
 }
 
 #menu.open::before {
-  content: "X"; /* Close icon */
+  content: "X"; 
 }
 
 
@@ -182,16 +233,25 @@ list-style-type:  none;
   padding: 10px 15px;
 }
 
-.navigation a:hover {
-  background-color: #E67E22;
-}
 
-/* Mobile Navigation */
 nav {
-  background-color: #143097;
-  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #3f5dc8;
 }
 
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  padding: 0.5rem 1rem; 
+}
+
+
+.nav-background {
+  padding: 0.25rem 0; 
+}
 .navigation {
   display: flex;
   list-style: none;
@@ -199,7 +259,6 @@ nav {
   padding: 0;
   justify-content:space-around;
   flex-direction: column;    
-   /* or space-around / space-between / flex-end */
   background-color: transparent; 
 }
 
@@ -217,7 +276,7 @@ nav {
   font-weight: 700;
 }
 
-/* When the menu is opened, display the links */
+
 .open a {
   display: block;
 }
@@ -230,30 +289,56 @@ nav {
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 1.5rem;
-  align-items: start;
-  font-family: var(--font-body);
-  background-color: var(--accent-color);
-  color: rgb(15, 8, 18);  
-  line-height: 1.6;
   margin: 1em;
+  background-color: var(--accent-color);
+
 }
+
+ul li {
+  display: flex;
+  align-items: center;
+}
+.highlights-container {
+  background-color: #ecf8ff; 
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.highlights-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937; 
+  margin-bottom: 1rem;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  color: #374151; 
+}
+
+
 
 .sidebar {
   background-color: #f4f4f4;
   padding-right:  5px;
   border-radius: 8px;
-  font-size: small;
+  font-size: medium;
+
 
 }
 
 .sidebar  ul {
   list-style: none;
   padding-left: 1em;
+  margin-bottom: 1.5rem;
+  
 }
 
-/* .attractions {
-  padding-left: 20px; 
-} */
+.sidebar li {
+  margin-bottom: 0.5rem; 
+}
 
 
 .photo-gallery {
@@ -295,7 +380,10 @@ nav {
 .form-container {
   background-color: var(--primary-color);
   padding: 2rem;
-  /* border-radius: 10px; */
+  max-width: 700px;
+  margin: 2rem auto; /* Center the form */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .form-section {
@@ -304,12 +392,15 @@ nav {
   border-radius: 10px;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -317,31 +408,56 @@ input[type="submit"] {
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
   background-color: #E67E22;
 }
 
+fieldset {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+legend {
+  padding: 0 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
 .wf1 fieldset {
-  margin: 2rem 0;
-  /* border: 1px solid #ddd; */
-  /* border-radius: 1px; */
-  padding: .5rem 2%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .wf1 legend {
-  /* color: #445ba9; */
-  padding: 0 .5rem;
+  padding: 0 0.75rem;
 }
 
 .wf1 label {
   display: block;
   padding-top: 1rem;
-  /* color: #9c2c13; */
-  font-size: .9rem;
+  font-size: 0.95rem;
+  color: #fff;
 }
 
+/* Base Styles */
+.form-container {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/
 /* Membership Benefits Section Styling */
 .membership-benefits {
   background-color: var(--primary-color);
@@ -396,25 +512,10 @@ input[type="submit"]:hover {
   margin: 2rem auto;
 }
 
-/* input, select, textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
 
-input[type="submit"] {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-}
-
-input[type="submit"]:hover {
-  background-color: #E67E22;
-} */
 /* Specific Styling for Thank You Page */
+
+
 .thank-you-page {
   background-color: var(--accent-color);
   color: var(--primary-color);
@@ -457,14 +558,14 @@ input[type="submit"]:hover {
 
 
 /* Directory */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
+
 
 /* Body base font and background */
-body {
+/* body {
   font-family: 'Open Sans', sans-serif;
   background-color: #F4F4F4;
   color: #2C3E50;
-}
+} */
 
 main h2 {
   font-family: 'Roboto', sans-serif;

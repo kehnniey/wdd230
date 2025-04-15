@@ -139,6 +139,13 @@ header {
     gap: 1.5rem;
   }
 
+  .highlights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
   .photo-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -157,5 +164,23 @@ header {
     grid-column: auto;
     grid-row: auto;
   }
+
+  
   }
   
+  /* Extend background edge-to-edge on mobile */
+@media screen and (max-width: 600px) {
+  .form-container {
+    margin: 0;              
+    border-radius: 0;      
+    padding: 1rem;          
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  fieldset {
+    padding: 0.2rem  0.1rem
+  }
+}
