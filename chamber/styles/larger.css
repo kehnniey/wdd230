@@ -168,7 +168,7 @@ header {
   
   }
   
-  /* Extend background edge-to-edge on mobile */
+
 @media screen and (max-width: 600px) {
   .form-container {
     margin: 0;              
